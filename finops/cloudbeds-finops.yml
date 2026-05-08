@@ -8,17 +8,16 @@ modified: '2026-05-08'
 reconciled: false
 tags:
 - Hospitality
-- PMS
 - Hotels
-- Channel Manager
-- Independent
+- PMS
+- Property Management
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Cloudbeds. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: FOCUS-aligned FinOps profile. Tiered property SaaS plus payment processing.
+notes: Multi-currency billing.
 sources:
-- https://www.cloudbeds.com/
+- https://www.cloudbeds.com/pricing/
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -29,12 +28,12 @@ alignedWith:
 publisherName: Cloudbeds
 serviceCategory: Hospitality
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Hybrid
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
-  - Usage
   - Purchase
+  - Usage
   - Adjustment
 focusColumns:
   ServiceName: Cloudbeds
@@ -45,13 +44,19 @@ focusColumns:
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: property_saas
+  description: Per-property monthly SaaS.
+  unit: property
   aggregation: sum
   dimensions:
   - account
-  - resource
+  - property
+- name: payments_volume
+  description: Cloudbeds Payments processing volume.
+  unit: USD
+  aggregation: sum
+  dimensions:
+  - property
 principles:
 - name: Visibility
   description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
