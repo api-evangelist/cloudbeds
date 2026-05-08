@@ -1,0 +1,29 @@
+aid: cloudbeds
+url: https://raw.githubusercontent.com/api-evangelist/cloudbeds/refs/heads/main/apis.yml
+name: Cloudbeds
+x-type: company
+description: >-
+  Cloudbeds is a hospitality management platform combining PMS, channel manager, booking engine, payments, and revenue management for independent hotels.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Hospitality
+  - PMS
+  - Hotels
+  - Channel Manager
+  - Independent
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.cloudbeds.com/
+  - type: Plans
+    url: plans/cloudbeds-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/cloudbeds-rate-limits.yml
+  - type: FinOps
+    url: finops/cloudbeds-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
