@@ -70,6 +70,26 @@ common:
   url: rate-limits/cloudbeds-rate-limits.yml
 - type: FinOps
   url: finops/cloudbeds-finops.yml
+- type: Integrations
+  url: https://www.cloudbeds.com/integrations/
+integrations:
+  - name: cloudbeds
+  - name: Cloudbeds Best PMS 2025 Finalist
+  - name: Cloudbeds Best Channel Manager 2025 Finalist
+  - name: Cloudbeds Hoteliers Choice Awards 2025
+  - name: Cloudbeds Best Places to Work 2025
+  - name: Whistle for Cloudbeds HotelTechReport rating
+  - name: Cloudbeds Deloitte rating
+  - name: Cloudbeds Airbnb partner
+  - name: Cloudbeds Expedia partner
+  - name: Cloudbeds Booking.com partner
+  - name: LinkedIn
+  - name: Instagram
+  - name: Facebook
+  - name: YouTube
+  - name: GDPR
+  - name: PCI
+  - name: SSL
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
