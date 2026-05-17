@@ -1,7 +1,7 @@
 aid: cloudbeds
 url: https://raw.githubusercontent.com/api-evangelist/cloudbeds/refs/heads/main/apis.yml
 name: Cloudbeds
-x-type: company
+kind: company
 description: Cloudbeds is a hospitality management platform offering PMS, channel manager, booking engine,
   and payments for independent hotels, hostels, and groups. Cloudbeds publishes a public REST API (v1.2
   and v1.3), a GraphQL API, blueprints, and webhooks.
