@@ -7,71 +7,75 @@ description: Cloudbeds is a hospitality management platform offering PMS, channe
   and v1.3), a GraphQL API, blueprints, and webhooks.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Hospitality
-- Hotels
-- PMS
-- Property Management
+  - Hospitality
+  - Hotels
+  - PMS
+  - Property Management
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-- aid: cloudbeds:rest-api-v1-3
-  name: Cloudbeds REST API v1.3
-  description: REST API exposing reservations, guests, rooms, rate plans, payments, and reporting for
-    properties using Cloudbeds. v1.3 is the latest documented version.
-  humanURL: https://developers.cloudbeds.com/reference
-  baseURL: https://hotels.cloudbeds.com/api/v1.3
-  tags:
-  - REST
-  - PMS
-  - v1.3
-  properties:
-  - type: Documentation
-    url: https://developers.cloudbeds.com/reference
-- aid: cloudbeds:rest-api-v1-2
-  name: Cloudbeds REST API v1.2 (Legacy)
-  description: Earlier supported version of the Cloudbeds REST API.
-  humanURL: https://developers.cloudbeds.com/reference
-  baseURL: https://hotels.cloudbeds.com/api/v1.2
-  tags:
-  - REST
-  - PMS
-  - Legacy
-  properties:
-  - type: Documentation
-    url: https://developers.cloudbeds.com/reference
-- aid: cloudbeds:graphql
-  name: Cloudbeds GraphQL API
-  description: GraphQL API offering a typed query interface alongside REST.
-  humanURL: https://developers.cloudbeds.com/reference
-  tags:
-  - GraphQL
-  properties:
-  - type: Documentation
-    url: https://developers.cloudbeds.com/reference
-- aid: cloudbeds:webhooks
-  name: Cloudbeds Webhooks
-  description: Event-driven webhooks for reservation, guest, and payment events.
-  humanURL: https://developers.cloudbeds.com/reference
-  tags:
-  - Webhooks
-  - Events
-  properties:
-  - type: Documentation
-    url: https://developers.cloudbeds.com/reference
+  - aid: cloudbeds:rest-api-v1-3
+    name: Cloudbeds REST API v1.3
+    description: REST API exposing reservations, guests, rooms, rate plans, payments, and reporting for
+      properties using Cloudbeds. v1.3 is the latest documented version.
+    humanURL: https://developers.cloudbeds.com/reference
+    baseURL: https://hotels.cloudbeds.com/api/v1.3
+    tags:
+    - REST
+    - PMS
+    - v1.3
+    properties:
+    - type: Documentation
+      url: https://developers.cloudbeds.com/reference
+  - aid: cloudbeds:rest-api-v1-2
+    name: Cloudbeds REST API v1.2 (Legacy)
+    description: Earlier supported version of the Cloudbeds REST API.
+    humanURL: https://developers.cloudbeds.com/reference
+    baseURL: https://hotels.cloudbeds.com/api/v1.2
+    tags:
+    - REST
+    - PMS
+    - Legacy
+    properties:
+    - type: Documentation
+      url: https://developers.cloudbeds.com/reference
+  - aid: cloudbeds:graphql
+    name: Cloudbeds GraphQL API
+    description: GraphQL API offering a typed query interface alongside REST.
+    humanURL: https://developers.cloudbeds.com/reference
+    tags:
+    - GraphQL
+    properties:
+    - type: Documentation
+      url: https://developers.cloudbeds.com/reference
+  - aid: cloudbeds:webhooks
+    name: Cloudbeds Webhooks
+    description: Event-driven webhooks for reservation, guest, and payment events.
+    humanURL: https://developers.cloudbeds.com/reference
+    tags:
+    - Webhooks
+    - Events
+    properties:
+    - type: Documentation
+      url: https://developers.cloudbeds.com/reference
 common:
-- type: Website
-  url: https://www.cloudbeds.com/
-- type: Developer
-  url: https://developers.cloudbeds.com/
-- type: Plans
-  url: plans/cloudbeds-plans-pricing.yml
-- type: RateLimits
-  url: rate-limits/cloudbeds-rate-limits.yml
-- type: FinOps
-  url: finops/cloudbeds-finops.yml
-- type: Integrations
-  url: https://www.cloudbeds.com/integrations/
+  - type: GitHubOrganization
+    url: https://github.com/cloudbeds
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/cloudbeds
+  - type: Website
+    url: https://www.cloudbeds.com/
+  - type: Developer
+    url: https://developers.cloudbeds.com/
+  - type: Plans
+    url: plans/cloudbeds-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/cloudbeds-rate-limits.yml
+  - type: FinOps
+    url: finops/cloudbeds-finops.yml
+  - type: Integrations
+    url: https://www.cloudbeds.com/integrations/
 integrations:
   - name: cloudbeds
   - name: Cloudbeds Best PMS 2025 Finalist
@@ -91,5 +95,5 @@ integrations:
   - name: PCI
   - name: SSL
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
