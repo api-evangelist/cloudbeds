@@ -76,6 +76,8 @@ common:
     url: finops/cloudbeds-finops.yml
   - type: Integrations
     url: https://www.cloudbeds.com/integrations/
+  - type: LLMsTxt
+    url: https://developers.cloudbeds.com/llms.txt
 integrations:
   - name: cloudbeds
   - name: Cloudbeds Best PMS 2025 Finalist
