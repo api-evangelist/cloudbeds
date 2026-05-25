@@ -1,0 +1,90 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Cloudbeds Payments
+  description: >-
+    Cloudbeds payments capability covering payment method discovery, recording
+    payments, and processing charges through the Cloudbeds REST API v1.3.
+  tags:
+    - Cloudbeds
+    - Payments
+    - PMS
+    - Hospitality
+  created: '2026-05-24'
+  modified: '2026-05-24'
+binds:
+  - namespace: env
+    keys:
+      CLOUDBEDS_API_KEY: CLOUDBEDS_API_KEY
+capability:
+  consumes:
+    - type: http
+      namespace: payments
+      baseUri: https://hotels.cloudbeds.com/api/v1.3
+      description: Cloudbeds REST API v1.3 payments surface.
+      resources:
+        - name: paymentMethods
+          path: /getPaymentMethods
+          operations:
+            - name: listPaymentMethods
+              method: GET
+              description: List accepted payment methods for a property.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+                  required: true
+        - name: recordPayment
+          path: /postPayment
+          operations:
+            - name: recordPayment
+              method: POST
+              description: Record a payment for a reservation.
+              outputRawFormat: json
+              inputParameters:
+                - name: body
+                  in: body
+                  type: object
+                  required: true
+        - name: processCharge
+          path: /postCharge
+          operations:
+            - name: processCharge
+              method: POST
+              description: Process a charge through Cloudbeds Payments.
+              outputRawFormat: json
+              inputParameters:
+                - name: body
+                  in: body
+                  type: object
+                  required: true
+      authentication:
+        type: apikey
+        key: X-API-KEY
+        value: '{{env.CLOUDBEDS_API_KEY}}'
+        placement: header
+  exposes:
+    - type: mcp
+      namespace: payments-mcp
+      port: 9090
+      transport: http
+      description: MCP adapter for Cloudbeds Payments.
+      tools:
+        - name: cloudbeds-list-payment-methods
+          description: List Cloudbeds payment methods.
+          hints:
+            readOnly: true
+            destructive: false
+            idempotent: true
+          call: payments.listPaymentMethods
+          with:
+            propertyID: tools.propertyID
+        - name: cloudbeds-record-payment
+          description: Record a payment against a Cloudbeds reservation.
+          hints:
+            readOnly: false
+            destructive: false
+            idempotent: false
+          call: payments.recordPayment
+          with:
+            body: tools.body

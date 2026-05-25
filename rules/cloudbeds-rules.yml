@@ -1,0 +1,104 @@
+aid: cloudbeds
+name: Cloudbeds Rules
+description: >-
+  Operational rules and guardrails for working with the Cloudbeds REST API
+  (v1.2/v1.3), GraphQL API, and webhooks. Codifies authentication, rate-limit
+  handling, scope of resources that can be created or modified, and
+  write-action policies for agents and integrations.
+modified: '2026-05-24'
+rules:
+  - id: cloudbeds-auth-apikey
+    name: API Key Or OAuth Authentication
+    description: >-
+      All requests must include either an X-API-KEY header for property-scoped
+      keys or an OAuth 2.0 bearer token for technology-partner integrations.
+      Credentials must never be embedded in source control or logs.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+      - cloudbeds:rest-api-v1-2
+      - cloudbeds:graphql
+    severity: required
+  - id: cloudbeds-respect-429
+    name: Respect Rate Limits
+    description: >-
+      Cloudbeds enforces per-property and per-app rate limits with HTTP 429
+      responses. Clients must honor 429 responses and any Retry-After header
+      with exponential backoff and jitter. Specific thresholds are not
+      publicly documented; calibrate against observed responses.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+      - cloudbeds:rest-api-v1-2
+      - cloudbeds:graphql
+    severity: required
+  - id: cloudbeds-prefer-webhooks
+    name: Prefer Webhooks Over Polling
+    description: >-
+      For reservation, guest, room, and payment change feeds, subscribe via
+      webhooks rather than polling list endpoints. Polling burns rate-limit
+      budget and increases the risk of throttling.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+      - cloudbeds:webhooks
+    severity: recommended
+  - id: cloudbeds-property-scope
+    name: Scope Requests To Property
+    description: >-
+      Most Cloudbeds endpoints require a propertyID parameter. Agents must
+      explicitly bind to a property and refuse cross-property operations
+      unless the OAuth scope and user authorization clearly grant access.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+      - cloudbeds:rest-api-v1-2
+    severity: required
+  - id: cloudbeds-destructive-confirm
+    name: Confirm Destructive Actions
+    description: >-
+      Cancelling reservations, refunding payments, deleting webhook
+      subscriptions, or modifying rates that affect live distribution channels
+      requires explicit user confirmation. Agents must not perform these
+      actions without authorization.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+      - cloudbeds:webhooks
+    severity: required
+  - id: cloudbeds-rate-distribution-care
+    name: Treat Rate Updates As High-Impact
+    description: >-
+      Rate plan updates propagate to connected OTAs (Booking.com, Expedia,
+      Airbnb, etc.). Validate dates, currencies, and channel mappings before
+      applying changes, and prefer dry-run or staging properties for bulk
+      changes.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+    severity: required
+  - id: cloudbeds-pci-payments
+    name: Handle Payment Data With Care
+    description: >-
+      Cloudbeds processes guest payment data and is PCI scope. Agents must not
+      log card numbers, CVVs, or full PANs, and must use Cloudbeds Payments
+      tokenization rather than raw card data wherever possible.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+    severity: required
+  - id: cloudbeds-pagination
+    name: Use Pagination
+    description: >-
+      List endpoints accept pageNumber and pageSize parameters. Always
+      paginate explicitly rather than assuming a single page of results.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+      - cloudbeds:rest-api-v1-2
+    severity: recommended
+  - id: cloudbeds-v1-3-preferred
+    name: Prefer v1.3 Over v1.2
+    description: >-
+      v1.3 is the current documented version of the Cloudbeds REST API. New
+      integrations should target v1.3; v1.2 should be used only for legacy
+      compatibility.
+    applies_to:
+      - cloudbeds:rest-api-v1-3
+      - cloudbeds:rest-api-v1-2
+    severity: recommended
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

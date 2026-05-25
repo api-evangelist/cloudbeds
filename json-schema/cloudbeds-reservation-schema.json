@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/schemas/cloudbeds/cloudbeds-reservation-schema.json",
+  "title": "Cloudbeds Reservation",
+  "description": "JSON Schema for a Cloudbeds reservation as returned by the Cloudbeds REST API v1.3 reservations endpoints.",
+  "type": "object",
+  "required": ["reservationID", "propertyID", "startDate", "endDate", "status"],
+  "properties": {
+    "reservationID": {
+      "type": "string",
+      "description": "Cloudbeds-assigned identifier for the reservation."
+    },
+    "propertyID": {
+      "type": "string",
+      "description": "Identifier for the Cloudbeds property the reservation belongs to."
+    },
+    "guestID": {
+      "type": "string",
+      "description": "Primary guest identifier associated with the reservation."
+    },
+    "guestName": {
+      "type": "string",
+      "description": "Primary guest full name."
+    },
+    "guestEmail": {
+      "type": "string",
+      "format": "email",
+      "description": "Primary guest email."
+    },
+    "guestPhone": {
+      "type": "string",
+      "description": "Primary guest phone number."
+    },
+    "status": {
+      "type": "string",
+      "description": "Reservation status (e.g. confirmed, in_house, checked_out, cancelled, no_show).",
+      "enum": [
+        "confirmed",
+        "not_confirmed",
+        "in_house",
+        "checked_out",
+        "cancelled",
+        "no_show"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "description": "Source of the reservation (e.g. direct, booking_com, expedia, airbnb)."
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Check-in date (ISO 8601)."
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Check-out date (ISO 8601)."
+    },
+    "rooms": {
+      "type": "array",
+      "description": "Rooms reserved for the stay.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "roomID": { "type": "string" },
+          "roomTypeID": { "type": "string" },
+          "adults": { "type": "integer", "minimum": 0 },
+          "children": { "type": "integer", "minimum": 0 },
+          "ratePlanID": { "type": "string" }
+        }
+      }
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "Reservation subtotal before taxes and fees."
+    },
+    "taxes": {
+      "type": "number",
+      "description": "Total taxes applied."
+    },
+    "total": {
+      "type": "number",
+      "description": "Total reservation amount."
+    },
+    "currency": {
+      "type": "string",
+      "description": "ISO 4217 currency code for the reservation."
+    },
+    "balance": {
+      "type": "number",
+      "description": "Outstanding balance owed on the reservation."
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

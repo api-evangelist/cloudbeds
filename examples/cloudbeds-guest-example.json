@@ -1,0 +1,21 @@
+{
+  "guestID": "GUEST-7782",
+  "propertyID": "PROP-1042",
+  "firstName": "Maria",
+  "lastName": "Hernandez",
+  "email": "maria.hernandez@example.com",
+  "phone": "+1-619-555-0144",
+  "country": "US",
+  "documentType": "drivers_license",
+  "documentNumber": "D9182734",
+  "address": "1500 Front Street",
+  "city": "San Diego",
+  "stateOrProvince": "CA",
+  "postalCode": "92101",
+  "dateOfBirth": "1988-04-21",
+  "language": "en",
+  "marketingOptIn": true,
+  "notes": "Repeat guest. Prefers high-floor king room.",
+  "dateCreated": "2025-11-02T18:05:00Z",
+  "dateModified": "2026-05-21T09:14:00Z"
+}

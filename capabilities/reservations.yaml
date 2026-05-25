@@ -1,0 +1,176 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Cloudbeds Reservations
+  description: >-
+    Cloudbeds reservation management capability covering listing, retrieval,
+    creation, and modification of reservations across Cloudbeds-managed
+    properties via the Cloudbeds REST API v1.3.
+  tags:
+    - Cloudbeds
+    - Reservations
+    - PMS
+    - Hospitality
+  created: '2026-05-24'
+  modified: '2026-05-24'
+binds:
+  - namespace: env
+    keys:
+      CLOUDBEDS_API_KEY: CLOUDBEDS_API_KEY
+capability:
+  consumes:
+    - type: http
+      namespace: reservations
+      baseUri: https://hotels.cloudbeds.com/api/v1.3
+      description: Cloudbeds REST API v1.3 reservations surface.
+      resources:
+        - name: reservations
+          path: /getReservations
+          operations:
+            - name: listReservations
+              method: GET
+              description: List reservations for a property with optional status, check-in date range, and pagination.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+                  required: true
+                - name: status
+                  in: query
+                  type: string
+                - name: checkInFrom
+                  in: query
+                  type: string
+                - name: checkInTo
+                  in: query
+                  type: string
+                - name: pageNumber
+                  in: query
+                  type: integer
+                - name: pageSize
+                  in: query
+                  type: integer
+              outputParameters:
+                - name: result
+                  type: object
+                  value: $.
+        - name: reservation
+          path: /getReservation
+          operations:
+            - name: getReservation
+              method: GET
+              description: Retrieve a single reservation by ID.
+              outputRawFormat: json
+              inputParameters:
+                - name: reservationID
+                  in: query
+                  type: string
+                  required: true
+              outputParameters:
+                - name: result
+                  type: object
+                  value: $.
+        - name: createReservation
+          path: /postReservation
+          operations:
+            - name: createReservation
+              method: POST
+              description: Create a new reservation.
+              outputRawFormat: json
+              inputParameters:
+                - name: body
+                  in: body
+                  type: object
+                  required: true
+              outputParameters:
+                - name: result
+                  type: object
+                  value: $.
+        - name: updateReservation
+          path: /putReservation
+          operations:
+            - name: updateReservation
+              method: PUT
+              description: Update an existing reservation.
+              outputRawFormat: json
+              inputParameters:
+                - name: body
+                  in: body
+                  type: object
+                  required: true
+              outputParameters:
+                - name: result
+                  type: object
+                  value: $.
+      authentication:
+        type: apikey
+        key: X-API-KEY
+        value: '{{env.CLOUDBEDS_API_KEY}}'
+        placement: header
+  exposes:
+    - type: rest
+      namespace: reservations-rest
+      port: 8080
+      description: REST adapter for Cloudbeds Reservations.
+      resources:
+        - path: /v1/reservations
+          name: reservations
+          description: List reservations.
+          operations:
+            - method: GET
+              name: listReservations
+              description: List reservations for a property.
+              call: reservations.listReservations
+              with:
+                propertyID: rest.query.propertyID
+                status: rest.query.status
+                checkInFrom: rest.query.checkInFrom
+                checkInTo: rest.query.checkInTo
+                pageNumber: rest.query.pageNumber
+                pageSize: rest.query.pageSize
+        - path: /v1/reservations/{reservationID}
+          name: reservation
+          description: Get reservation by ID.
+          operations:
+            - method: GET
+              name: getReservation
+              description: Get reservation.
+              call: reservations.getReservation
+              with:
+                reservationID: rest.path.reservationID
+    - type: mcp
+      namespace: reservations-mcp
+      port: 9090
+      transport: http
+      description: MCP adapter for Cloudbeds Reservations.
+      tools:
+        - name: cloudbeds-list-reservations
+          description: List Cloudbeds reservations for a property.
+          hints:
+            readOnly: true
+            destructive: false
+            idempotent: true
+          call: reservations.listReservations
+          with:
+            propertyID: tools.propertyID
+            status: tools.status
+            checkInFrom: tools.checkInFrom
+            checkInTo: tools.checkInTo
+        - name: cloudbeds-get-reservation
+          description: Retrieve a Cloudbeds reservation by ID.
+          hints:
+            readOnly: true
+            destructive: false
+            idempotent: true
+          call: reservations.getReservation
+          with:
+            reservationID: tools.reservationID
+        - name: cloudbeds-create-reservation
+          description: Create a new Cloudbeds reservation.
+          hints:
+            readOnly: false
+            destructive: false
+            idempotent: false
+          call: reservations.createReservation
+          with:
+            body: tools.body

@@ -1,0 +1,21 @@
+{
+  "ratePlanID": "RP-FLEX-2026",
+  "propertyID": "PROP-1042",
+  "name": "Flexible Rate 2026",
+  "description": "Fully refundable rate up to 24 hours before arrival.",
+  "roomTypeID": "RT-DELUXE-KING",
+  "currency": "USD",
+  "isActive": true,
+  "isBaseRate": true,
+  "isDerived": false,
+  "rates": [
+    { "date": "2026-06-12", "rate": 175.00, "minStay": 1, "maxStay": 14, "closedToArrival": false, "closedToDeparture": false },
+    { "date": "2026-06-13", "rate": 175.00, "minStay": 1, "maxStay": 14, "closedToArrival": false, "closedToDeparture": false },
+    { "date": "2026-06-14", "rate": 175.00, "minStay": 1, "maxStay": 14, "closedToArrival": false, "closedToDeparture": false }
+  ],
+  "channelDistribution": [
+    { "channel": "booking_com", "channelRoomTypeCode": "BDC-DLX-KING", "channelRatePlanCode": "BDC-FLEX" },
+    { "channel": "expedia", "channelRoomTypeCode": "EXP-DLX-KING", "channelRatePlanCode": "EXP-FLEX" },
+    { "channel": "airbnb", "channelRoomTypeCode": "ABB-DLX-KING", "channelRatePlanCode": "ABB-FLEX" }
+  ]
+}

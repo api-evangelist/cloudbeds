@@ -1,6 +1,6 @@
 # Cloudbeds (cloudbeds)
 
-Cloudbeds is a hospitality management platform offering PMS, channel manager, booking engine, and payments for independent hotels, hostels, and groups. Cloudbeds publishes a public REST API (v1.2 and v1.3), a GraphQL API, blueprints, and webhooks.
+Cloudbeds is a San Diego-based hospitality management platform for small and mid-size independent hotels, hostels, and groups, offering PMS, channel manager, booking engine, payments, and a marketplace of integrations. Cloudbeds publishes a public REST API (v1.2 and v1.3), a GraphQL API, blueprints, and webhooks for reservations, guests, rooms, rates, payments, and events.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/cloudbeds/refs/heads/main/apis.yml)
 
@@ -8,24 +8,40 @@ Cloudbeds is a hospitality management platform offering PMS, channel manager, bo
 - **x-type:** company
 
 ## Tags
-- Hospitality, Hotels, PMS, Property Management
+- Hospitality, Hotels, PMS, Property Management, Channel Manager, Booking Engine, Payments
 
 ## APIs
-- **Cloudbeds REST API v1.3** — current REST API at `https://hotels.cloudbeds.com/api/v1.3`. Docs: https://developers.cloudbeds.com/reference
-- **Cloudbeds REST API v1.2** — legacy version still supported.
-- **Cloudbeds GraphQL API** — typed query interface.
-- **Cloudbeds Webhooks** — reservation/guest/payment events.
+- **Cloudbeds REST API v1.3** — current REST API at `https://hotels.cloudbeds.com/api/v1.3`. Reservations, guests, rooms, rate plans, payments, webhooks, dashboard. Docs: https://developers.cloudbeds.com/reference
+- **Cloudbeds REST API v1.2** — legacy version still supported for backwards compatibility.
+- **Cloudbeds GraphQL API** — typed query interface alongside REST.
+- **Cloudbeds Webhooks** — reservation, guest, room, and payment events.
+
+## Artifacts
+- **OpenAPI** — [openapi/cloudbeds-openapi.yml](openapi/cloudbeds-openapi.yml) — v1.3 surface generated from the developer documentation.
+- **Naftiko Capabilities** — [capabilities/](capabilities/) — reservations, guests, rooms and rates, payments, webhooks.
+- **JSON Schemas** — [json-schema/](json-schema/) — Reservation, Guest, Rate Plan.
+- **JSON Structure** — [json-structure/](json-structure/) — Reservation, Guest.
+- **JSON-LD Context** — [json-ld/cloudbeds-context.jsonld](json-ld/cloudbeds-context.jsonld) — schema.org/LodgingReservation alignment.
+- **Examples** — [examples/](examples/) — reservation, guest, rate plan.
+- **Spectral Rules** — [rules/cloudbeds-rules.yml](rules/cloudbeds-rules.yml) — auth, rate limits, destructive-action confirmation, PCI handling.
+- **Vocabulary** — [vocabulary/cloudbeds-vocabulary.yml](vocabulary/cloudbeds-vocabulary.yml) — hospitality, distribution, reservations, payments, integration terms.
+
+## Commercial Surface
+- **Plans** — [plans/cloudbeds-plans-pricing.yml](plans/cloudbeds-plans-pricing.yml) — tiered property SaaS (Foundation/Essentials/Plus/Premier) plus payment processing; free Marketplace developer registration.
+- **RateLimits** — [rate-limits/cloudbeds-rate-limits.yml](rate-limits/cloudbeds-rate-limits.yml) — 429 responses; specific thresholds not publicly documented.
+- **FinOps** — [finops/cloudbeds-finops.yml](finops/cloudbeds-finops.yml) — FOCUS-aligned hybrid (SaaS plus payments volume).
 
 ## Timestamps
 - **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- **Modified:** 2026-05-24
 
 ## Common Properties
 - [Website](https://www.cloudbeds.com/)
 - [Developer Portal](https://developers.cloudbeds.com/)
-- [Plans](plans/cloudbeds-plans-pricing.yml) — tiered property SaaS + free developer (reconciled: false)
-- [RateLimits](rate-limits/cloudbeds-rate-limits.yml) — limits not publicly documented (reconciled: false)
-- [FinOps](finops/cloudbeds-finops.yml) — FOCUS-aligned hybrid (reconciled: false)
+- [GitHub Organization](https://github.com/cloudbeds)
+- [LinkedIn](https://www.linkedin.com/company/cloudbeds)
+- [Integrations](https://www.cloudbeds.com/integrations/)
+- [llms.txt](https://developers.cloudbeds.com/llms.txt)
 
 ## Maintainers
 **FN:** Kin Lane

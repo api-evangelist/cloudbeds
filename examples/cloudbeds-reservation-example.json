@@ -1,0 +1,28 @@
+{
+  "reservationID": "RES-2026-05-18723",
+  "propertyID": "PROP-1042",
+  "guestID": "GUEST-7782",
+  "guestName": "Maria Hernandez",
+  "guestEmail": "maria.hernandez@example.com",
+  "guestPhone": "+1-619-555-0144",
+  "status": "confirmed",
+  "source": "booking_com",
+  "startDate": "2026-06-12",
+  "endDate": "2026-06-15",
+  "rooms": [
+    {
+      "roomID": "ROOM-204",
+      "roomTypeID": "RT-DELUXE-KING",
+      "adults": 2,
+      "children": 0,
+      "ratePlanID": "RP-FLEX-2026"
+    }
+  ],
+  "subtotal": 525.00,
+  "taxes": 78.75,
+  "total": 603.75,
+  "currency": "USD",
+  "balance": 0.00,
+  "dateCreated": "2026-05-20T14:32:11Z",
+  "dateModified": "2026-05-21T09:14:00Z"
+}

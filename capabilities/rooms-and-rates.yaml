@@ -1,0 +1,138 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Cloudbeds Rooms And Rates
+  description: >-
+    Cloudbeds inventory and pricing capability covering room types, rooms,
+    availability, and rate plans across Cloudbeds properties.
+  tags:
+    - Cloudbeds
+    - Rooms
+    - Rates
+    - Inventory
+    - Availability
+    - PMS
+  created: '2026-05-24'
+  modified: '2026-05-24'
+binds:
+  - namespace: env
+    keys:
+      CLOUDBEDS_API_KEY: CLOUDBEDS_API_KEY
+capability:
+  consumes:
+    - type: http
+      namespace: rooms-and-rates
+      baseUri: https://hotels.cloudbeds.com/api/v1.3
+      description: Cloudbeds REST API v1.3 rooms, rate plans, and availability surface.
+      resources:
+        - name: rooms
+          path: /getRooms
+          operations:
+            - name: listRooms
+              method: GET
+              description: List rooms at a property.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+                  required: true
+        - name: roomTypes
+          path: /getRoomTypes
+          operations:
+            - name: listRoomTypes
+              method: GET
+              description: List room types at a property.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+                  required: true
+        - name: availability
+          path: /getAvailableRoomTypes
+          operations:
+            - name: getAvailableRoomTypes
+              method: GET
+              description: Check room type availability for a date range.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+                  required: true
+                - name: startDate
+                  in: query
+                  type: string
+                  required: true
+                - name: endDate
+                  in: query
+                  type: string
+                  required: true
+        - name: ratePlans
+          path: /getRatePlans
+          operations:
+            - name: listRatePlans
+              method: GET
+              description: List rate plans at a property.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+                  required: true
+        - name: rate
+          path: /getRate
+          operations:
+            - name: getRate
+              method: GET
+              description: Get rate details for a property and room type.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+                  required: true
+                - name: roomTypeID
+                  in: query
+                  type: string
+      authentication:
+        type: apikey
+        key: X-API-KEY
+        value: '{{env.CLOUDBEDS_API_KEY}}'
+        placement: header
+  exposes:
+    - type: mcp
+      namespace: rooms-and-rates-mcp
+      port: 9090
+      transport: http
+      description: MCP adapter for Cloudbeds Rooms and Rates.
+      tools:
+        - name: cloudbeds-list-rooms
+          description: List Cloudbeds rooms at a property.
+          hints:
+            readOnly: true
+            destructive: false
+            idempotent: true
+          call: rooms-and-rates.listRooms
+          with:
+            propertyID: tools.propertyID
+        - name: cloudbeds-list-room-types
+          description: List Cloudbeds room types at a property.
+          hints:
+            readOnly: true
+            destructive: false
+            idempotent: true
+          call: rooms-and-rates.listRoomTypes
+          with:
+            propertyID: tools.propertyID
+        - name: cloudbeds-check-availability
+          description: Check Cloudbeds room availability for a date range.
+          hints:
+            readOnly: true
+            destructive: false
+            idempotent: true
+          call: rooms-and-rates.getAvailableRoomTypes
+          with:
+            propertyID: tools.propertyID
+            startDate: tools.startDate
+            endDate: tools.endDate

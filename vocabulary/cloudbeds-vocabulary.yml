@@ -1,0 +1,222 @@
+vocabulary:
+  name: Cloudbeds Vocabulary
+  description: >-
+    Domain vocabulary for Cloudbeds, covering hospitality property management,
+    distribution, reservations, rate management, and guest-experience concepts
+    expressed through the Cloudbeds REST and GraphQL APIs.
+  version: '1.0'
+  created: '2026-05-24'
+  modified: '2026-05-24'
+
+property-management:
+  - term: Property Management System
+    definition: >-
+      The system of record for a hotel, hostel, or short-term-rental property,
+      managing reservations, guests, room inventory, housekeeping, and folios.
+      Cloudbeds is a cloud-native PMS targeting small and mid-size
+      independent properties.
+    aliases:
+      - PMS
+    related:
+      - Channel Manager
+      - Booking Engine
+      - Folio
+
+  - term: Property
+    definition: >-
+      A single hotel, hostel, or accommodation operated on the Cloudbeds
+      platform. Most Cloudbeds REST API endpoints are scoped to a propertyID.
+    related:
+      - PMS
+      - Room Type
+      - Rate Plan
+
+  - term: Folio
+    definition: >-
+      The running ledger of charges, payments, and adjustments attached to a
+      guest stay. Folios are settled at or after check-out.
+    related:
+      - Reservation
+      - Payment
+      - Charge
+
+  - term: Housekeeping
+    definition: >-
+      The workflow for tracking room cleaning status, turn times, and
+      inspection sign-off, surfaced through the Cloudbeds front-desk UI and
+      housekeeping endpoints.
+    related:
+      - Room
+      - PMS
+
+distribution:
+  - term: Channel Manager
+    definition: >-
+      A system that distributes inventory and rates from a PMS to multiple
+      online travel agencies (OTAs) like Booking.com, Expedia, and Airbnb,
+      and synchronizes reservations back. Cloudbeds includes a native channel
+      manager called myallocator.
+    aliases:
+      - myallocator
+    related:
+      - PMS
+      - OTA
+      - Rate Plan
+
+  - term: Online Travel Agency
+    definition: >-
+      A third-party booking platform that lists property inventory and
+      processes reservations on behalf of the property. Major OTAs integrated
+      with Cloudbeds include Booking.com, Expedia, Airbnb, and Vrbo.
+    aliases:
+      - OTA
+    related:
+      - Channel Manager
+      - Distribution
+
+  - term: Booking Engine
+    definition: >-
+      A property's direct-booking interface, typically embedded into the
+      property's own website, allowing guests to book without going through
+      an OTA. Cloudbeds offers a native booking engine.
+    related:
+      - PMS
+      - Channel Manager
+
+  - term: Rate Plan
+    definition: >-
+      A pricing configuration defining the nightly rate, conditions
+      (refundable vs non-refundable, included services), and channel mappings
+      for a given room type. Rate plans can be base rates or derived rates.
+    related:
+      - Room Type
+      - Channel Manager
+      - Rate
+
+  - term: Derived Rate Plan
+    definition: >-
+      A rate plan whose price is calculated as a modification (percentage or
+      flat amount) of another base rate plan, allowing related products to
+      stay in sync as base rates change.
+    related:
+      - Rate Plan
+      - Base Rate
+
+reservations-and-guests:
+  - term: Reservation
+    definition: >-
+      A confirmed or pending booking of one or more rooms at a property for a
+      defined arrival and departure date, associated with a primary guest
+      and a source channel.
+    related:
+      - Guest
+      - Room
+      - Folio
+      - Status
+
+  - term: Reservation Status
+    definition: >-
+      The lifecycle state of a reservation. Cloudbeds uses statuses including
+      not_confirmed, confirmed, in_house, checked_out, cancelled, and
+      no_show.
+    related:
+      - Reservation
+      - Check-in
+      - Check-out
+
+  - term: Guest
+    definition: >-
+      A person associated with one or more reservations, holding identifying
+      information, contact details, document data, and stay history.
+    related:
+      - Reservation
+      - Marketing Opt-in
+
+  - term: Room Type
+    definition: >-
+      A category of rooms with shared attributes (occupancy, bed
+      configuration, amenities). Rate plans and availability are usually
+      managed at the room-type level rather than per physical room.
+    related:
+      - Room
+      - Rate Plan
+      - Availability
+
+  - term: Room
+    definition: >-
+      A specific physical unit assigned to a reservation. Multiple rooms can
+      share a room type.
+    related:
+      - Room Type
+      - Reservation
+      - Housekeeping
+
+  - term: Availability
+    definition: >-
+      The count of bookable units of a given room type for a given date.
+      Availability is the input to channel manager pushes and booking engine
+      searches.
+    related:
+      - Room Type
+      - Rate Plan
+      - Channel Manager
+
+payments:
+  - term: Cloudbeds Payments
+    definition: >-
+      The integrated payment processing offering inside Cloudbeds, allowing
+      properties to capture cards, process charges, and reconcile payouts
+      without contracting a separate processor.
+    related:
+      - Payment
+      - PCI
+      - Charge
+
+  - term: Charge
+    definition: >-
+      An attempted authorization or capture of a payment instrument against a
+      reservation folio. Charges may succeed, decline, or require additional
+      verification.
+    related:
+      - Payment
+      - Folio
+
+  - term: PCI Scope
+    definition: >-
+      The set of systems and processes that handle, transmit, or store
+      payment card data and must comply with PCI-DSS. Cloudbeds Payments
+      reduces the property's PCI scope by holding card data in
+      Cloudbeds-controlled infrastructure.
+    aliases:
+      - PCI-DSS
+    related:
+      - Cloudbeds Payments
+      - Payment
+
+integration:
+  - term: Cloudbeds Marketplace
+    definition: >-
+      Cloudbeds' integration directory and developer registration surface,
+      where technology partners list their apps and properties enable them
+      against their account.
+    related:
+      - Technology Partner
+      - OAuth
+
+  - term: Technology Partner
+    definition: >-
+      A third-party software vendor with an approved Cloudbeds integration
+      distributed through the Cloudbeds Marketplace. Technology partners
+      typically use OAuth 2.0 with per-property authorization.
+    related:
+      - Cloudbeds Marketplace
+      - OAuth
+
+  - term: Webhook Event
+    definition: >-
+      An asynchronous notification dispatched by Cloudbeds when a reservation,
+      guest, room, or payment changes state. Webhooks remove the need to
+      poll for changes.
+    related:
+      - Webhook
+      - Reservation

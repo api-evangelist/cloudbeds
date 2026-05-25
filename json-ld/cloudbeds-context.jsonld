@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "cb": "https://api-evangelist.com/vocab/cloudbeds#",
+    "schema": "https://schema.org/",
+    "gr": "http://purl.org/goodrelations/v1#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Reservation": "schema:LodgingReservation",
+    "Guest": "schema:Person",
+    "Room": "schema:HotelRoom",
+    "RoomType": "schema:Accommodation",
+    "RatePlan": "cb:RatePlan",
+    "Property": "schema:LodgingBusiness",
+    "Payment": "schema:PaymentMethod",
+    "Webhook": "cb:Webhook",
+
+    "id": "@id",
+    "type": "@type",
+
+    "reservationID": {
+      "@id": "schema:reservationId",
+      "@type": "xsd:string"
+    },
+    "propertyID": {
+      "@id": "cb:propertyId",
+      "@type": "xsd:string"
+    },
+    "guestID": {
+      "@id": "cb:guestId",
+      "@type": "xsd:string"
+    },
+    "roomID": {
+      "@id": "cb:roomId",
+      "@type": "xsd:string"
+    },
+    "roomTypeID": {
+      "@id": "cb:roomTypeId",
+      "@type": "xsd:string"
+    },
+    "ratePlanID": {
+      "@id": "cb:ratePlanId",
+      "@type": "xsd:string"
+    },
+
+    "guestName": "schema:name",
+    "firstName": "schema:givenName",
+    "lastName": "schema:familyName",
+    "email": "schema:email",
+    "phone": "schema:telephone",
+    "address": "schema:streetAddress",
+    "city": "schema:addressLocality",
+    "stateOrProvince": "schema:addressRegion",
+    "postalCode": "schema:postalCode",
+    "country": "schema:addressCountry",
+    "dateOfBirth": {
+      "@id": "schema:birthDate",
+      "@type": "xsd:date"
+    },
+    "language": "schema:inLanguage",
+
+    "status": "schema:reservationStatus",
+    "source": "cb:source",
+    "startDate": {
+      "@id": "schema:checkinTime",
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@id": "schema:checkoutTime",
+      "@type": "xsd:date"
+    },
+    "rooms": "schema:reservedTicket",
+    "adults": "cb:adults",
+    "children": "cb:children",
+    "subtotal": "schema:price",
+    "taxes": "cb:taxes",
+    "total": "schema:totalPrice",
+    "balance": "cb:balance",
+    "currency": "schema:priceCurrency",
+
+    "rate": {
+      "@id": "gr:hasCurrencyValue",
+      "@type": "xsd:decimal"
+    },
+    "date": {
+      "@id": "schema:validFrom",
+      "@type": "xsd:date"
+    },
+
+    "event": "cb:eventType",
+    "endpointUrl": {
+      "@id": "schema:url",
+      "@type": "xsd:anyURI"
+    },
+
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "dateModified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

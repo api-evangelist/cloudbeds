@@ -1,0 +1,99 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Cloudbeds Webhooks
+  description: >-
+    Cloudbeds webhook management capability covering listing, creating, and
+    deleting webhook subscriptions for reservation, guest, room, and payment
+    events.
+  tags:
+    - Cloudbeds
+    - Webhooks
+    - Events
+    - PMS
+  created: '2026-05-24'
+  modified: '2026-05-24'
+binds:
+  - namespace: env
+    keys:
+      CLOUDBEDS_API_KEY: CLOUDBEDS_API_KEY
+capability:
+  consumes:
+    - type: http
+      namespace: webhooks
+      baseUri: https://hotels.cloudbeds.com/api/v1.3
+      description: Cloudbeds REST API v1.3 webhooks surface.
+      resources:
+        - name: webhooks
+          path: /getWebhooks
+          operations:
+            - name: listWebhooks
+              method: GET
+              description: List configured webhook subscriptions.
+              outputRawFormat: json
+              inputParameters:
+                - name: propertyID
+                  in: query
+                  type: string
+        - name: createWebhook
+          path: /postWebhook
+          operations:
+            - name: createWebhook
+              method: POST
+              description: Subscribe to a Cloudbeds event.
+              outputRawFormat: json
+              inputParameters:
+                - name: body
+                  in: body
+                  type: object
+                  required: true
+        - name: deleteWebhook
+          path: /deleteWebhook
+          operations:
+            - name: deleteWebhook
+              method: DELETE
+              description: Delete a webhook subscription.
+              outputRawFormat: json
+              inputParameters:
+                - name: id
+                  in: query
+                  type: string
+                  required: true
+      authentication:
+        type: apikey
+        key: X-API-KEY
+        value: '{{env.CLOUDBEDS_API_KEY}}'
+        placement: header
+  exposes:
+    - type: mcp
+      namespace: webhooks-mcp
+      port: 9090
+      transport: http
+      description: MCP adapter for Cloudbeds Webhooks.
+      tools:
+        - name: cloudbeds-list-webhooks
+          description: List Cloudbeds webhook subscriptions.
+          hints:
+            readOnly: true
+            destructive: false
+            idempotent: true
+          call: webhooks.listWebhooks
+          with:
+            propertyID: tools.propertyID
+        - name: cloudbeds-create-webhook
+          description: Subscribe to a Cloudbeds event.
+          hints:
+            readOnly: false
+            destructive: false
+            idempotent: false
+          call: webhooks.createWebhook
+          with:
+            body: tools.body
+        - name: cloudbeds-delete-webhook
+          description: Delete a Cloudbeds webhook subscription.
+          hints:
+            readOnly: false
+            destructive: true
+            idempotent: true
+          call: webhooks.deleteWebhook
+          with:
+            id: tools.id

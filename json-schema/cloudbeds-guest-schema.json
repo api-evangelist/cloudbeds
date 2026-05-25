@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/schemas/cloudbeds/cloudbeds-guest-schema.json",
+  "title": "Cloudbeds Guest",
+  "description": "JSON Schema for a Cloudbeds guest as returned by the Cloudbeds REST API v1.3 guests endpoints.",
+  "type": "object",
+  "required": ["guestID"],
+  "properties": {
+    "guestID": {
+      "type": "string",
+      "description": "Cloudbeds-assigned identifier for the guest."
+    },
+    "propertyID": {
+      "type": "string",
+      "description": "Identifier for the Cloudbeds property associated with the guest record."
+    },
+    "firstName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "phone": { "type": "string" },
+    "country": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 country code."
+    },
+    "documentType": {
+      "type": "string",
+      "description": "Identification document type (e.g. passport, drivers_license)."
+    },
+    "documentNumber": { "type": "string" },
+    "address": { "type": "string" },
+    "city": { "type": "string" },
+    "stateOrProvince": { "type": "string" },
+    "postalCode": { "type": "string" },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date"
+    },
+    "language": {
+      "type": "string",
+      "description": "Preferred language (ISO 639-1)."
+    },
+    "marketingOptIn": {
+      "type": "boolean",
+      "description": "Whether the guest has opted in to marketing communications."
+    },
+    "notes": { "type": "string" },
+    "dateCreated": { "type": "string", "format": "date-time" },
+    "dateModified": { "type": "string", "format": "date-time" }
+  }
+}
