@@ -1,0 +1,545 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cloudbeds REST API v1.3",
+    "version": "1.3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Obtain OAuth access token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/access_token",
+        "body": {
+          "type": "form-urlencoded",
+          "data": [
+            {
+              "name": "client_id",
+              "value": ""
+            },
+            {
+              "name": "client_secret",
+              "value": ""
+            },
+            {
+              "name": "grant_type",
+              "value": ""
+            },
+            {
+              "name": "code",
+              "value": ""
+            },
+            {
+              "name": "redirect_uri",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Obtain OAuth access token"
+    },
+    {
+      "info": {
+        "name": "Get OAuth user info",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/userinfo"
+      },
+      "docs": "Get OAuth user info"
+    },
+    {
+      "info": {
+        "name": "List hotels/properties",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getHotels"
+      },
+      "docs": "List hotels/properties"
+    },
+    {
+      "info": {
+        "name": "Get hotel details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getHotelDetails",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get hotel details"
+    },
+    {
+      "info": {
+        "name": "List reservations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getReservations",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "status",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "checkInFrom",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "checkInTo",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageNumber",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List reservations"
+    },
+    {
+      "info": {
+        "name": "Get reservation",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getReservation",
+        "params": [
+          {
+            "name": "reservationID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get reservation"
+    },
+    {
+      "info": {
+        "name": "Create reservation",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postReservation",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Create reservation"
+    },
+    {
+      "info": {
+        "name": "Update reservation",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/putReservation",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Update reservation"
+    },
+    {
+      "info": {
+        "name": "List guests",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getGuestList",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageNumber",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List guests"
+    },
+    {
+      "info": {
+        "name": "Get guest",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getGuest",
+        "params": [
+          {
+            "name": "guestID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get guest"
+    },
+    {
+      "info": {
+        "name": "Create guest",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postGuest",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Create guest"
+    },
+    {
+      "info": {
+        "name": "Update guest",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/putGuest",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Update guest"
+    },
+    {
+      "info": {
+        "name": "List rooms",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getRooms",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List rooms"
+    },
+    {
+      "info": {
+        "name": "List room types",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getRoomTypes",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List room types"
+    },
+    {
+      "info": {
+        "name": "Check available room types",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getAvailableRoomTypes",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "startDate",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "endDate",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Check available room types"
+    },
+    {
+      "info": {
+        "name": "Assign room to reservation",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postRoomAssign"
+      },
+      "docs": "Assign room to reservation"
+    },
+    {
+      "info": {
+        "name": "Check guest into room",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postRoomCheckIn"
+      },
+      "docs": "Check guest into room"
+    },
+    {
+      "info": {
+        "name": "Check guest out of room",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postRoomCheckOut"
+      },
+      "docs": "Check guest out of room"
+    },
+    {
+      "info": {
+        "name": "List rate plans",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getRatePlans",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List rate plans"
+    },
+    {
+      "info": {
+        "name": "Get rate details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getRate",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "roomTypeID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get rate details"
+    },
+    {
+      "info": {
+        "name": "Update rate",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/putRate",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Update rate"
+    },
+    {
+      "info": {
+        "name": "List payment methods",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getPaymentMethods",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List payment methods"
+    },
+    {
+      "info": {
+        "name": "Record a payment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postPayment",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Record a payment"
+    },
+    {
+      "info": {
+        "name": "Process a charge",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postCharge"
+      },
+      "docs": "Process a charge"
+    },
+    {
+      "info": {
+        "name": "List webhooks",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getWebhooks",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List webhooks"
+    },
+    {
+      "info": {
+        "name": "Create webhook",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/postWebhook",
+        "body": {
+          "type": "form-urlencoded",
+          "data": []
+        }
+      },
+      "docs": "Create webhook"
+    },
+    {
+      "info": {
+        "name": "Delete webhook",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/deleteWebhook",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Delete webhook"
+    },
+    {
+      "info": {
+        "name": "Get dashboard data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getDashboard",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get dashboard data"
+    },
+    {
+      "info": {
+        "name": "List users on property",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://hotels.cloudbeds.com/api/v1.3/getUsers",
+        "params": [
+          {
+            "name": "propertyID",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List users on property"
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,2998 @@
+{
+  "item": [
+    {
+      "id": "a7dd6d82-fe44-4952-a6d0-e262aa804f05",
+      "name": "Obtain OAuth access token",
+      "request": {
+        "name": "Obtain OAuth access token",
+        "description": {},
+        "url": {
+          "path": [
+            "access_token"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "client_id",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "client_secret",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "grant_type",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "redirect_uri",
+              "value": "<string>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "dad16d11-0e0f-40f2-877e-4c9d4fc04106",
+          "name": "Token returned",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "access_token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "client_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "client_secret",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "grant_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "redirect_uri",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"access_token\": \"string\",\n  \"refresh_token\": \"string\",\n  \"token_type\": \"string\",\n  \"expires_in\": 1218\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "89d32e8b-3136-4fe6-89fa-075d40aa199f",
+      "name": "Get OAuth user info",
+      "request": {
+        "name": "Get OAuth user info",
+        "description": {},
+        "url": {
+          "path": [
+            "userinfo"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "07d79579-9ec7-4384-87a4-3fb98f61c4a1",
+          "name": "User info",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "userinfo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "474a88d7-4063-46d0-ba81-e377b18e09eb",
+      "name": "List hotels/properties",
+      "request": {
+        "name": "List hotels/properties",
+        "description": {},
+        "url": {
+          "path": [
+            "getHotels"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0d4671ac-4c42-4765-ae89-57400416e722",
+          "name": "Hotels collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getHotels"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "20595f70-48e8-477b-a86f-0d12048b551a",
+      "name": "Get hotel details",
+      "request": {
+        "name": "Get hotel details",
+        "description": {},
+        "url": {
+          "path": [
+            "getHotelDetails"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "61b9d541-545b-4e38-98bd-b069b616dd38",
+          "name": "Hotel details",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getHotelDetails"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "53966797-5c22-4431-9890-3f98f4ff0d18",
+      "name": "List reservations",
+      "request": {
+        "name": "List reservations",
+        "description": {},
+        "url": {
+          "path": [
+            "getReservations"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "status",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "checkInFrom",
+              "value": "<date>"
+            },
+            {
+              "disabled": false,
+              "key": "checkInTo",
+              "value": "<date>"
+            },
+            {
+              "disabled": false,
+              "key": "pageNumber",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageSize",
+              "value": "<integer>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "07d94513-2f06-48f5-b9cc-a73117b510a4",
+          "name": "Reservations list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getReservations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "key": "checkInFrom",
+                  "value": "<date>"
+                },
+                {
+                  "key": "checkInTo",
+                  "value": "<date>"
+                },
+                {
+                  "key": "pageNumber",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "6939373d-da89-4bfe-85b1-d77bc70112cc",
+      "name": "Get reservation",
+      "request": {
+        "name": "Get reservation",
+        "description": {},
+        "url": {
+          "path": [
+            "getReservation"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "reservationID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "7bf45da2-be90-4ddc-ab4f-adb71015e8d1",
+          "name": "Reservation",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getReservation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "reservationID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"reservationID\": \"string\",\n  \"guestName\": \"string\",\n  \"status\": \"string\",\n  \"startDate\": \"1958-12-15\",\n  \"endDate\": \"1991-12-27\",\n  \"roomTypeID\": \"string\",\n  \"total\": 2679.930796201\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b1aeabf6-7f2f-4d47-b8a0-432893415f41",
+      "name": "Create reservation",
+      "request": {
+        "name": "Create reservation",
+        "description": {},
+        "url": {
+          "path": [
+            "postReservation"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "reservationID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "guestName",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "status",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "startDate",
+              "value": "<date>"
+            },
+            {
+              "disabled": false,
+              "key": "endDate",
+              "value": "<date>"
+            },
+            {
+              "disabled": false,
+              "key": "roomTypeID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "total",
+              "value": "<number>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "8052d835-cbb4-4414-a4cd-054177f1abd7",
+          "name": "Reservation created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postReservation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "reservationID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "guestName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "roomTypeID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "total",
+                  "value": "<number>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c2ada87e-559c-4302-a41c-b8ecb4c9f662",
+      "name": "Update reservation",
+      "request": {
+        "name": "Update reservation",
+        "description": {},
+        "url": {
+          "path": [
+            "putReservation"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "reservationID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "guestName",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "status",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "startDate",
+              "value": "<date>"
+            },
+            {
+              "disabled": false,
+              "key": "endDate",
+              "value": "<date>"
+            },
+            {
+              "disabled": false,
+              "key": "roomTypeID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "total",
+              "value": "<number>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "cb6186e7-beef-4f64-9dad-9f07b019e5ad",
+          "name": "Updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "putReservation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "reservationID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "guestName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "roomTypeID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "total",
+                  "value": "<number>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "edb48a6c-ffe1-4557-8094-61846ab3cfe9",
+      "name": "List guests",
+      "request": {
+        "name": "List guests",
+        "description": {},
+        "url": {
+          "path": [
+            "getGuestList"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "pageNumber",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageSize",
+              "value": "<integer>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "cd4d2226-75ec-4681-8e3d-18895e10425d",
+          "name": "Guests list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getGuestList"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "pageNumber",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4076646b-9c33-4538-8fae-c1462a63f107",
+      "name": "Get guest",
+      "request": {
+        "name": "Get guest",
+        "description": {},
+        "url": {
+          "path": [
+            "getGuest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "guestID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "09e1d34a-46a7-43d9-a8ab-f6ecbf5ff176",
+          "name": "Guest",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getGuest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "guestID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"guestID\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"phone\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "161fdc6c-1780-4282-b73c-040ae46273ff",
+      "name": "Create guest",
+      "request": {
+        "name": "Create guest",
+        "description": {},
+        "url": {
+          "path": [
+            "postGuest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "guestID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "firstName",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "lastName",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "email",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "phone",
+              "value": "<string>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "7792db19-fcb7-4ef0-831c-ecb8c48cdf3d",
+          "name": "Created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postGuest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "guestID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "firstName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "lastName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5568bddb-e356-4489-8524-3d5fce09f8ba",
+      "name": "Update guest",
+      "request": {
+        "name": "Update guest",
+        "description": {},
+        "url": {
+          "path": [
+            "putGuest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "guestID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "firstName",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "lastName",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "email",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "phone",
+              "value": "<string>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "5d1e9b3e-4bcf-4fb7-bec7-e04d600e64de",
+          "name": "Updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "putGuest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "guestID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "firstName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "lastName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b9f597eb-fb5c-4a92-ac46-398b8534daac",
+      "name": "List rooms",
+      "request": {
+        "name": "List rooms",
+        "description": {},
+        "url": {
+          "path": [
+            "getRooms"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a73cab91-edf7-4fd0-813c-05f76e150b5c",
+          "name": "Rooms",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getRooms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "df69cfa2-9c29-480f-9bb9-bfc7dfc339cf",
+      "name": "List room types",
+      "request": {
+        "name": "List room types",
+        "description": {},
+        "url": {
+          "path": [
+            "getRoomTypes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "86f01ee4-6150-404a-9af2-797cf29605b5",
+          "name": "Room types",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getRoomTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "31bbd4ca-e39f-4f16-97d3-09e2ec3d140e",
+      "name": "Check available room types",
+      "request": {
+        "name": "Check available room types",
+        "description": {},
+        "url": {
+          "path": [
+            "getAvailableRoomTypes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "startDate",
+              "value": "<date>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "endDate",
+              "value": "<date>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "6ec89f9f-4de2-4bac-a480-2e5c6813b515",
+          "name": "Availability",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getAvailableRoomTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "startDate",
+                  "value": "<date>"
+                },
+                {
+                  "key": "endDate",
+                  "value": "<date>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "263721e4-984a-4e6c-a42e-f9a6e375c087",
+      "name": "Assign room to reservation",
+      "request": {
+        "name": "Assign room to reservation",
+        "description": {},
+        "url": {
+          "path": [
+            "postRoomAssign"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "55f4e400-f529-4998-ac0e-5565ba0b115a",
+          "name": "Assigned",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postRoomAssign"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "cd657b4a-0150-434d-9cde-6de3c0f71fe4",
+      "name": "Check guest into room",
+      "request": {
+        "name": "Check guest into room",
+        "description": {},
+        "url": {
+          "path": [
+            "postRoomCheckIn"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "5a3735ee-b7f0-4d0f-8912-b295638f8742",
+          "name": "Checked in",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postRoomCheckIn"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "824d903b-d7ae-465f-b1b1-a51472e6c379",
+      "name": "Check guest out of room",
+      "request": {
+        "name": "Check guest out of room",
+        "description": {},
+        "url": {
+          "path": [
+            "postRoomCheckOut"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2962b582-e5fe-4717-a361-c32771dbf7ce",
+          "name": "Checked out",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postRoomCheckOut"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "69d14385-d181-493e-860d-b5931f8afc74",
+      "name": "List rate plans",
+      "request": {
+        "name": "List rate plans",
+        "description": {},
+        "url": {
+          "path": [
+            "getRatePlans"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b77f16c9-ec7f-4666-98b8-bacaaa98c239",
+          "name": "Rate plans",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getRatePlans"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a3995c0c-1d04-4eb7-8728-eed61c60f143",
+      "name": "Get rate details",
+      "request": {
+        "name": "Get rate details",
+        "description": {},
+        "url": {
+          "path": [
+            "getRate"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "roomTypeID",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "83c7cdac-a825-4f94-84a2-a75df834dfb6",
+          "name": "Rate",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getRate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "roomTypeID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"rateID\": \"string\",\n  \"roomTypeID\": \"string\",\n  \"rate\": 517.4565773252792,\n  \"date\": \"1962-04-27\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3926ace8-01b0-4b8d-9520-1227873516fb",
+      "name": "Update rate",
+      "request": {
+        "name": "Update rate",
+        "description": {},
+        "url": {
+          "path": [
+            "putRate"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "rateID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "roomTypeID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "rate",
+              "value": "<number>"
+            },
+            {
+              "disabled": false,
+              "key": "date",
+              "value": "<date>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "236373bc-dca5-45fe-8593-d9c5ec3cabe1",
+          "name": "Updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "putRate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "rateID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "roomTypeID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "rate",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "8e2a04bb-3224-429d-9d71-4d5eab6b6310",
+      "name": "List payment methods",
+      "request": {
+        "name": "List payment methods",
+        "description": {},
+        "url": {
+          "path": [
+            "getPaymentMethods"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "1e6e208b-ba36-4e44-b033-767360d70b6a",
+          "name": "Payment methods",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getPaymentMethods"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c45fe95f-12bf-4648-9919-a6fd9c6d5174",
+      "name": "Record a payment",
+      "request": {
+        "name": "Record a payment",
+        "description": {},
+        "url": {
+          "path": [
+            "postPayment"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "paymentID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "reservationID",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "amount",
+              "value": "<number>"
+            },
+            {
+              "disabled": false,
+              "key": "currency",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "type",
+              "value": "<string>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "8cfd3291-d192-420f-9fe9-677a18434ca4",
+          "name": "Payment recorded",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postPayment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "paymentID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "reservationID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "amount",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "currency",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2901c539-36d0-477c-924c-88cd9758260b",
+      "name": "Process a charge",
+      "request": {
+        "name": "Process a charge",
+        "description": {},
+        "url": {
+          "path": [
+            "postCharge"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "5324e3b0-c0c8-41cc-872c-b7ea097b87a3",
+          "name": "Charge processed",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postCharge"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7dcde38f-dfa9-4dbf-b33e-8eefe68f3d19",
+      "name": "List webhooks",
+      "request": {
+        "name": "List webhooks",
+        "description": {},
+        "url": {
+          "path": [
+            "getWebhooks"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "57b183aa-d39f-4ee9-b1bb-056924843399",
+          "name": "Webhooks list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getWebhooks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "9616c367-a13a-45f8-8137-1a746826e533",
+      "name": "Create webhook",
+      "request": {
+        "name": "Create webhook",
+        "description": {},
+        "url": {
+          "path": [
+            "postWebhook"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "id",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "event",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "endpointUrl",
+              "value": "<string>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "fec070a3-d7b9-403e-b8d2-f10179952b7a",
+          "name": "Created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "postWebhook"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "event",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endpointUrl",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "dee9d1aa-5382-4ebc-8e4d-91d2933682f8",
+      "name": "Delete webhook",
+      "request": {
+        "name": "Delete webhook",
+        "description": {},
+        "url": {
+          "path": [
+            "deleteWebhook"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "id",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b908f505-a7d0-4743-b641-8ef2e8161275",
+          "name": "Deleted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "deleteWebhook"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "539a5dee-7894-40ae-a44b-dc5f18506b83",
+      "name": "Get dashboard data",
+      "request": {
+        "name": "Get dashboard data",
+        "description": {},
+        "url": {
+          "path": [
+            "getDashboard"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "45922c52-7038-4fd3-8ecb-6d0b56f5c027",
+          "name": "Dashboard",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getDashboard"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4e62ae99-6c29-42a8-a9ad-59cc97e6cd81",
+      "name": "List users on property",
+      "request": {
+        "name": "List users on property",
+        "description": {},
+        "url": {
+          "path": [
+            "getUsers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "propertyID",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "ec2089f2-bd0f-41bd-bb00-f6fbcaae7a9c",
+          "name": "Users list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "getUsers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "propertyID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-API-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 77,\n  \"total\": 2068\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://hotels.cloudbeds.com/api/v1.3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9ddeec6f-b264-47f8-a573-dcc8137833f2",
+    "name": "Cloudbeds REST API v1.3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Cloudbeds REST API for property management - reservations, guests, rooms,\nrate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the\ncurrent documented version (v1.2 remains available). Authentication is via\nAPI keys or OAuth 2.0 for technology partners.\n",
+      "type": "text/plain"
+    }
+  }
+}
