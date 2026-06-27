@@ -50,11 +50,11 @@ apis:
     url: json-structure/cloudbeds-guest-structure.json
   - type: JSONLD
     url: json-ld/cloudbeds-context.jsonld
-  - type: Example
+  - type: Examples
     url: examples/cloudbeds-reservation-example.json
-  - type: Example
+  - type: Examples
     url: examples/cloudbeds-guest-example.json
-  - type: Example
+  - type: Examples
     url: examples/cloudbeds-rate-plan-example.json
   - type: Vocabulary
     url: vocabulary/cloudbeds-vocabulary.yml
@@ -110,7 +110,7 @@ common:
   url: finops/cloudbeds-finops.yml
 - type: Integrations
   url: https://www.cloudbeds.com/integrations/
-- type: LLMsTxt
+- type: LlmsText
   url: https://developers.cloudbeds.com/llms.txt
 - type: SpectralRules
   url: rules/cloudbeds-rules.yml
