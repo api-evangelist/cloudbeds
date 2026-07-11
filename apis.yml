@@ -94,6 +94,10 @@ apis:
   - type: Documentation
     url: https://developers.cloudbeds.com/reference
 common:
+- type: DomainSecurity
+  url: security/cloudbeds-domain-security.yml
+- type: Authentication
+  url: authentication/cloudbeds-authentication.yml
 - type: OAuthScopes
   url: scopes/cloudbeds-scopes.yml
 - url: https://www.cloudbeds.com/feed/

@@ -1,0 +1,27 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/cloudbeds-openapi.yml
+summary:
+  types:
+  - apiKey
+  - oauth2
+  api_key_in:
+  - header
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: apiKey
+  type: apiKey
+  in: header
+  parameter: X-API-KEY
+  sources:
+  - openapi/cloudbeds-openapi.yml
+- name: oauth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://hotels.cloudbeds.com/api/v1.2/oauth
+    tokenUrl: https://hotels.cloudbeds.com/api/v1.2/access_token
+    scopes: 2
+  sources:
+  - openapi/cloudbeds-openapi.yml
