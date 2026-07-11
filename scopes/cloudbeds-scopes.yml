@@ -1,0 +1,23 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/cloudbeds-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/cloudbeds-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://hotels.cloudbeds.com/api/v1.2/oauth
+    tokenUrl: https://hotels.cloudbeds.com/api/v1.2/access_token
+scopes:
+- scope: read
+  description: Read access
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/cloudbeds-openapi.yml
+- scope: write
+  description: Write access
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/cloudbeds-openapi.yml

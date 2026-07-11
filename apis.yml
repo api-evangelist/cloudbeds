@@ -94,6 +94,10 @@ apis:
   - type: Documentation
     url: https://developers.cloudbeds.com/reference
 common:
+- type: OAuthScopes
+  url: scopes/cloudbeds-scopes.yml
+- url: https://www.cloudbeds.com/feed/
+  type: Blog
 - type: GitHubOrganization
   url: https://github.com/cloudbeds
 - type: LinkedIn
