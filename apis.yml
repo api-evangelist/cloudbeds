@@ -94,6 +94,8 @@ apis:
   - type: Documentation
     url: https://developers.cloudbeds.com/reference
 common:
+- type: AgenticAccess
+  url: agentic-access/cloudbeds-agentic-access.yml
 - type: DomainSecurity
   url: security/cloudbeds-domain-security.yml
 - type: Authentication
