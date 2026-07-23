@@ -1,0 +1,92 @@
+openapi: 3.1.0
+info:
+  title: Cloudbeds REST API v1.3 Access Token PostReservation API
+  description: 'Cloudbeds REST API for property management - reservations, guests, rooms,
+
+    rate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the
+
+    current documented version (v1.2 remains available). Authentication is via
+
+    API keys or OAuth 2.0 for technology partners.
+
+    '
+  version: 1.3.0
+servers:
+- url: https://hotels.cloudbeds.com/api/v1.3
+  description: Cloudbeds REST API v1.3
+- url: https://hotels.cloudbeds.com/api/v1.2
+  description: Cloudbeds REST API v1.2 (legacy)
+security:
+- apiKey: []
+- oauth2:
+  - read
+  - write
+tags:
+- name: PostReservation
+paths:
+  /postReservation:
+    post:
+      summary: Create reservation
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        '200':
+          description: Reservation created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessEnvelope'
+      tags:
+      - PostReservation
+components:
+  schemas:
+    SuccessEnvelope:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        data:
+          type: object
+        count:
+          type: integer
+        total:
+          type: integer
+    Reservation:
+      type: object
+      properties:
+        reservationID:
+          type: string
+        guestName:
+          type: string
+        status:
+          type: string
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        roomTypeID:
+          type: string
+        total:
+          type: number
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://hotels.cloudbeds.com/api/v1.2/oauth
+          tokenUrl: https://hotels.cloudbeds.com/api/v1.2/access_token
+          scopes:
+            read: Read access
+            write: Write access

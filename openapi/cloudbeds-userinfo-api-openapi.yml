@@ -1,0 +1,53 @@
+openapi: 3.1.0
+info:
+  title: Cloudbeds REST API v1.3 Access Token Userinfo API
+  description: 'Cloudbeds REST API for property management - reservations, guests, rooms,
+
+    rate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the
+
+    current documented version (v1.2 remains available). Authentication is via
+
+    API keys or OAuth 2.0 for technology partners.
+
+    '
+  version: 1.3.0
+servers:
+- url: https://hotels.cloudbeds.com/api/v1.3
+  description: Cloudbeds REST API v1.3
+- url: https://hotels.cloudbeds.com/api/v1.2
+  description: Cloudbeds REST API v1.2 (legacy)
+security:
+- apiKey: []
+- oauth2:
+  - read
+  - write
+tags:
+- name: Userinfo
+paths:
+  /userinfo:
+    get:
+      summary: Get OAuth user info
+      responses:
+        '200':
+          description: User info
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Userinfo
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://hotels.cloudbeds.com/api/v1.2/oauth
+          tokenUrl: https://hotels.cloudbeds.com/api/v1.2/access_token
+          scopes:
+            read: Read access
+            write: Write access
