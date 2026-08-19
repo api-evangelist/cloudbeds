@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cloudbeds REST API v1.3 Access Token PutGuest API",
+    "version": "1.3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PutGuest",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Update guest",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://hotels.cloudbeds.com/api/v1.3/putGuest",
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Update guest"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

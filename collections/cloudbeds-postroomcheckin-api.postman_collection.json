@@ -1,0 +1,124 @@
+{
+  "item": [
+    {
+      "id": "c4eace87-411f-49f5-99be-0f101f1fbc4e",
+      "name": "PostRoomCheckIn",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "19bfca85-d049-47ee-9817-7fd8c3f96ae3",
+          "name": "Check guest into room",
+          "request": {
+            "name": "Check guest into room",
+            "description": {},
+            "url": {
+              "path": [
+                "postRoomCheckIn"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4873227c-556a-45c8-b6dd-6e6682c97756",
+              "name": "Checked in",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "postRoomCheckIn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 1110,\n  \"total\": 4594\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://hotels.cloudbeds.com/api/v1.3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8b05c1e8-a3af-4a49-b942-f91cdcb61377",
+    "name": "Cloudbeds REST API v1.3 Access Token PostRoomCheckIn API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Cloudbeds REST API for property management - reservations, guests, rooms,\nrate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the\ncurrent documented version (v1.2 remains available). Authentication is via\nAPI keys or OAuth 2.0 for technology partners.\n",
+      "type": "text/plain"
+    }
+  }
+}

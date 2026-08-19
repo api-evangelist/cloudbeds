@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cloudbeds REST API v1.3 Access Token PutReservation API",
+    "version": "1.3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PutReservation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Update reservation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://hotels.cloudbeds.com/api/v1.3/putReservation",
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Update reservation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

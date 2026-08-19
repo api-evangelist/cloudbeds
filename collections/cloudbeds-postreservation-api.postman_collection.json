@@ -1,0 +1,207 @@
+{
+  "item": [
+    {
+      "id": "c523f313-519a-44e1-a0c7-45d777ff03b5",
+      "name": "PostReservation",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b28c07f1-9faf-4f2e-9d48-e17d93aa8b47",
+          "name": "Create reservation",
+          "request": {
+            "name": "Create reservation",
+            "description": {},
+            "url": {
+              "path": [
+                "postReservation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "reservationID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "guestName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "roomTypeID",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "total",
+                  "value": "<number>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "08469c5c-0a77-4a69-84e8-eb51278a5935",
+              "name": "Reservation created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "postReservation"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "reservationID",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "guestName",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "roomTypeID",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "total",
+                      "value": "<number>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {},\n  \"count\": 1850,\n  \"total\": 1352\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://hotels.cloudbeds.com/api/v1.3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e75a663d-abc9-4556-9faf-e0d4c9bb29a0",
+    "name": "Cloudbeds REST API v1.3 Access Token PostReservation API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Cloudbeds REST API for property management - reservations, guests, rooms,\nrate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the\ncurrent documented version (v1.2 remains available). Authentication is via\nAPI keys or OAuth 2.0 for technology partners.\n",
+      "type": "text/plain"
+    }
+  }
+}

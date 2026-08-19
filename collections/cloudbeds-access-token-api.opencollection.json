@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cloudbeds REST API v1.3 Access Token API",
+    "version": "1.3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Access Token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Obtain OAuth access token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://hotels.cloudbeds.com/api/v1.3/access_token",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "client_id",
+                  "value": ""
+                },
+                {
+                  "name": "client_secret",
+                  "value": ""
+                },
+                {
+                  "name": "grant_type",
+                  "value": ""
+                },
+                {
+                  "name": "code",
+                  "value": ""
+                },
+                {
+                  "name": "redirect_uri",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Obtain OAuth access token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

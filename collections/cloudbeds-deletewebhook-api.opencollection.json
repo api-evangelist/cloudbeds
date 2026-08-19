@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cloudbeds REST API v1.3 Access Token DeleteWebhook API",
+    "version": "1.3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DeleteWebhook",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Delete webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://hotels.cloudbeds.com/api/v1.3/deleteWebhook",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cloudbeds REST API v1.3 Access Token GetRatePlans API",
+    "version": "1.3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "GetRatePlans",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List rate plans",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://hotels.cloudbeds.com/api/v1.3/getRatePlans",
+            "params": [
+              {
+                "name": "propertyID",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List rate plans"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
