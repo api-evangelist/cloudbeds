@@ -66,6 +66,9 @@ apis:
     of polling list endpoints.
   humanURL: https://developers.cloudbeds.com/reference
   tags:
+  - Webhook
+  - Event
+  tags_raw:
   - Webhooks
   - Events
   properties:
@@ -111,6 +114,8 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
+  - Delete Webhook
+  tags_raw:
   - DeleteWebhook
   properties:
   - type: OpenAPI
@@ -179,6 +184,8 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
+  - Get Dashboard
+  tags_raw:
   - GetDashboard
   properties:
   - type: OpenAPI
@@ -621,6 +628,8 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
+  - Get Webhooks
+  tags_raw:
   - GetWebhooks
   properties:
   - type: OpenAPI
@@ -1029,6 +1038,8 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
+  - UserInfo
+  tags_raw:
   - Userinfo
   properties:
   - type: OpenAPI
