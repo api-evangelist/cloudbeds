@@ -1081,6 +1081,9 @@ apis:
   - type: Vocabulary
     url: vocabulary/cloudbeds-vocabulary.yml
 common:
+- type: CapabilityMap
+  url: capabilities/cloudbeds-capability-edges.yml
+  name: Cloudbeds Business Capability Map
 - type: AgenticAccess
   url: agentic-access/cloudbeds-agentic-access.yml
 - type: DomainSecurity

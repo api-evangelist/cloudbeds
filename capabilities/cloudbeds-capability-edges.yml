@@ -1,0 +1,118 @@
+slug: cloudbeds
+provider: Cloudbeds
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Travel & Hospitality
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 12
+edges:
+- tag: PostReservation
+  spec_file: cloudbeds-postreservation-api-openapi.yml
+  capability_id: BC-4020.10
+  capability_id_l1: BC-4020
+  capability_name: Reservation Capture
+  confidence: 0.95
+  evidence: 'POST /postReservation  Create reservation (schemas: Reservation)'
+  reason: Directly creates reservations in a PMS — reservation capture.
+- tag: PostRoomCheckIn
+  spec_file: cloudbeds-postroomcheckin-api-openapi.yml
+  capability_id: BC-4060.10
+  capability_id_l1: BC-4060
+  capability_name: Front Office Operations
+  confidence: 0.9
+  evidence: POST /postRoomCheckIn  Check guest into room
+  reason: Guest check-in is core front office operations at the property.
+- tag: PostRoomCheckOut
+  spec_file: cloudbeds-postroomcheckout-api-openapi.yml
+  capability_id: BC-4060.10
+  capability_id_l1: BC-4060
+  capability_name: Front Office Operations
+  confidence: 0.9
+  evidence: POST /postRoomCheckOut  Check guest out of room
+  reason: Guest check-out is core front office operations at the property.
+- tag: GetReservation
+  spec_file: cloudbeds-getreservation-api-openapi.yml
+  capability_id: BC-4020
+  capability_id_l1: BC-4020
+  capability_name: Reservation & Booking Management
+  confidence: 0.85
+  evidence: 'GET /getReservation  Get reservation; schemas: Reservation'
+  reason: Reservation retrieval in a hotel PMS is squarely reservation and booking lifecycle management;
+    read-only access does not pin a single sub-capability.
+- tag: GetReservations
+  spec_file: cloudbeds-getreservations-api-openapi.yml
+  capability_id: BC-4020
+  capability_id_l1: BC-4020
+  capability_name: Reservation & Booking Management
+  confidence: 0.85
+  evidence: GET /getReservations  List reservations
+  reason: Listing reservations is part of the reservation/booking record lifecycle in the PMS; sub-capability
+    not determinable from a read-only list.
+- tag: GetRoomTypes
+  spec_file: cloudbeds-getroomtypes-api-openapi.yml
+  capability_id: BC-4000.10
+  capability_id_l1: BC-4000
+  capability_name: Lodging Product Management
+  confidence: 0.85
+  evidence: GET /getRoomTypes  List room types
+  reason: Room types are the canonical accommodation product structure named in Lodging Product Management.
+- tag: PostRoomAssign
+  spec_file: cloudbeds-postroomassign-api-openapi.yml
+  capability_id: BC-4060.10
+  capability_id_l1: BC-4060
+  capability_name: Front Office Operations
+  confidence: 0.85
+  evidence: POST /postRoomAssign  Assign room to reservation
+  reason: Room assignment is an explicit front-office operation ('check-in, room assignment, check-out').
+- tag: PutReservation
+  spec_file: cloudbeds-putreservation-api-openapi.yml
+  capability_id: BC-4020.20
+  capability_id_l1: BC-4020
+  capability_name: Booking Modification & Cancellation
+  confidence: 0.85
+  evidence: 'PUT /putReservation — "Update reservation"; schemas: Reservation'
+  reason: Single operation updates an existing hotel reservation in the Cloudbeds PMS, which is booking
+    modification within reservation lifecycle management.
+- tag: DeleteWebhook
+  spec_file: cloudbeds-deletewebhook-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.8
+  evidence: DELETE /deleteWebhook  Delete webhook
+  reason: Webhook subscription lifecycle management; technical event-delivery plumbing rather than a hospitality
+    capability.
+- tag: GetRatePlans
+  spec_file: cloudbeds-getrateplans-api-openapi.yml
+  capability_id: BC-4000.10
+  capability_id_l1: BC-4000
+  capability_name: Lodging Product Management
+  confidence: 0.8
+  evidence: GET /getRatePlans  List rate plans
+  reason: Rate plans are explicitly named in the lodging product management definition; this endpoint
+    lists the property's rate plan catalogue.
+- tag: Access Token
+  spec_file: cloudbeds-access-token-api-openapi.yml
+  capability_id: BC-4270.40
+  capability_id_l1: BC-4270
+  capability_name: Developer Identity & Credential Management
+  confidence: 0.75
+  evidence: POST /access_token  Obtain OAuth access token
+  reason: Authentication endpoint issuing OAuth tokens to API consumers — developer credential plumbing,
+    no hospitality business capability.
+- tag: GetGuestList
+  spec_file: cloudbeds-getguestlist-api-openapi.yml
+  capability_id: BC-4040.10
+  capability_id_l1: BC-4040
+  capability_name: Guest Profile & Identity Management
+  confidence: 0.75
+  evidence: GET /getGuestList  List guests
+  reason: Listing guest records exposes the property's guest profile master; maps to guest profile management,
+    though the single list operation is thin.
