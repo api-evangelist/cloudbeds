@@ -126,7 +126,7 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
-  - Delete Webhook
+  - DeleteWebhook
   tags_raw:
   - DeleteWebhook
   properties:
@@ -196,7 +196,7 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
-  - Get Dashboard
+  - GetDashboard
   tags_raw:
   - GetDashboard
   properties:
@@ -640,7 +640,7 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
-  - Get Webhooks
+  - GetWebhooks
   tags_raw:
   - GetWebhooks
   properties:
@@ -1050,7 +1050,7 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.3
   tags:
-  - UserInfo
+  - Userinfo
   tags_raw:
   - Userinfo
   properties:
