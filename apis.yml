@@ -120,42 +120,6 @@ apis:
     url: examples/cloudbeds-rate-plan-example.json
   - type: Vocabulary
     url: vocabulary/cloudbeds-vocabulary.yml
-- aid: cloudbeds:cloudbeds-deletewebhook-api
-  name: Cloudbeds DeleteWebhook API
-  description: The DeleteWebhook API from Cloudbeds — 1 operation(s) for deletewebhook.
-  humanURL: https://developers.cloudbeds.com/reference
-  baseURL: https://hotels.cloudbeds.com/api/v1.3
-  tags:
-  - Delete Webhook
-  tags_raw:
-  - DeleteWebhook
-  properties:
-  - type: OpenAPI
-    url: openapi/cloudbeds-deletewebhook-api-openapi.yml
-  - type: Documentation
-    url: https://developers.cloudbeds.com/reference
-  - type: SpectralRules
-    url: rules/cloudbeds-rules.yml
-  - type: JSONSchema
-    url: json-schema/cloudbeds-reservation-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudbeds-guest-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudbeds-rate-plan-schema.json
-  - type: JSONStructure
-    url: json-structure/cloudbeds-reservation-structure.json
-  - type: JSONStructure
-    url: json-structure/cloudbeds-guest-structure.json
-  - type: JSONLD
-    url: json-ld/cloudbeds-context.jsonld
-  - type: Examples
-    url: examples/cloudbeds-reservation-example.json
-  - type: Examples
-    url: examples/cloudbeds-guest-example.json
-  - type: Examples
-    url: examples/cloudbeds-rate-plan-example.json
-  - type: Vocabulary
-    url: vocabulary/cloudbeds-vocabulary.yml
 - aid: cloudbeds:cloudbeds-getavailableroomtypes-api
   name: Cloudbeds GetAvailableRoomTypes API
   description: The GetAvailableRoomTypes API from Cloudbeds — 1 operation(s) for getavailableroomtypes.
@@ -166,42 +130,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/cloudbeds-getavailableroomtypes-api-openapi.yml
-  - type: Documentation
-    url: https://developers.cloudbeds.com/reference
-  - type: SpectralRules
-    url: rules/cloudbeds-rules.yml
-  - type: JSONSchema
-    url: json-schema/cloudbeds-reservation-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudbeds-guest-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudbeds-rate-plan-schema.json
-  - type: JSONStructure
-    url: json-structure/cloudbeds-reservation-structure.json
-  - type: JSONStructure
-    url: json-structure/cloudbeds-guest-structure.json
-  - type: JSONLD
-    url: json-ld/cloudbeds-context.jsonld
-  - type: Examples
-    url: examples/cloudbeds-reservation-example.json
-  - type: Examples
-    url: examples/cloudbeds-guest-example.json
-  - type: Examples
-    url: examples/cloudbeds-rate-plan-example.json
-  - type: Vocabulary
-    url: vocabulary/cloudbeds-vocabulary.yml
-- aid: cloudbeds:cloudbeds-getdashboard-api
-  name: Cloudbeds GetDashboard API
-  description: The GetDashboard API from Cloudbeds — 1 operation(s) for getdashboard.
-  humanURL: https://developers.cloudbeds.com/reference
-  baseURL: https://hotels.cloudbeds.com/api/v1.3
-  tags:
-  - Get Dashboard
-  tags_raw:
-  - GetDashboard
-  properties:
-  - type: OpenAPI
-    url: openapi/cloudbeds-getdashboard-api-openapi.yml
   - type: Documentation
     url: https://developers.cloudbeds.com/reference
   - type: SpectralRules
@@ -634,42 +562,6 @@ apis:
     url: examples/cloudbeds-rate-plan-example.json
   - type: Vocabulary
     url: vocabulary/cloudbeds-vocabulary.yml
-- aid: cloudbeds:cloudbeds-getwebhooks-api
-  name: Cloudbeds GetWebhooks API
-  description: The GetWebhooks API from Cloudbeds — 1 operation(s) for getwebhooks.
-  humanURL: https://developers.cloudbeds.com/reference
-  baseURL: https://hotels.cloudbeds.com/api/v1.3
-  tags:
-  - Get Webhooks
-  tags_raw:
-  - GetWebhooks
-  properties:
-  - type: OpenAPI
-    url: openapi/cloudbeds-getwebhooks-api-openapi.yml
-  - type: Documentation
-    url: https://developers.cloudbeds.com/reference
-  - type: SpectralRules
-    url: rules/cloudbeds-rules.yml
-  - type: JSONSchema
-    url: json-schema/cloudbeds-reservation-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudbeds-guest-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudbeds-rate-plan-schema.json
-  - type: JSONStructure
-    url: json-structure/cloudbeds-reservation-structure.json
-  - type: JSONStructure
-    url: json-structure/cloudbeds-guest-structure.json
-  - type: JSONLD
-    url: json-ld/cloudbeds-context.jsonld
-  - type: Examples
-    url: examples/cloudbeds-reservation-example.json
-  - type: Examples
-    url: examples/cloudbeds-guest-example.json
-  - type: Examples
-    url: examples/cloudbeds-rate-plan-example.json
-  - type: Vocabulary
-    url: vocabulary/cloudbeds-vocabulary.yml
 - aid: cloudbeds:cloudbeds-postcharge-api
   name: Cloudbeds PostCharge API
   description: The PostCharge API from Cloudbeds — 1 operation(s) for postcharge.
@@ -1044,18 +936,118 @@ apis:
     url: examples/cloudbeds-rate-plan-example.json
   - type: Vocabulary
     url: vocabulary/cloudbeds-vocabulary.yml
-- aid: cloudbeds:cloudbeds-userinfo-api
-  name: Cloudbeds Userinfo API
-  description: The Userinfo API from Cloudbeds — 1 operation(s) for userinfo.
+- aid: cloudbeds:cloudbeds-delete-webhook-api
+  name: Cloudbeds Delete Webhook API
+  description: The Delete Webhook API from Cloudbeds — 1 operation(s) for delete webhook.
   humanURL: https://developers.cloudbeds.com/reference
-  baseURL: https://hotels.cloudbeds.com/api/v1.3
+  baseURL: https://hotels.cloudbeds.com/api/v1.2
   tags:
-  - UserInfo
-  tags_raw:
-  - Userinfo
+  - Delete Webhook
   properties:
   - type: OpenAPI
-    url: openapi/cloudbeds-userinfo-api-openapi.yml
+    url: openapi/cloudbeds-delete-webhook-api-openapi.yml
+  - type: Documentation
+    url: https://developers.cloudbeds.com/reference
+  - type: SpectralRules
+    url: rules/cloudbeds-rules.yml
+  - type: JSONSchema
+    url: json-schema/cloudbeds-reservation-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudbeds-guest-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudbeds-rate-plan-schema.json
+  - type: JSONStructure
+    url: json-structure/cloudbeds-reservation-structure.json
+  - type: JSONStructure
+    url: json-structure/cloudbeds-guest-structure.json
+  - type: JSONLD
+    url: json-ld/cloudbeds-context.jsonld
+  - type: Examples
+    url: examples/cloudbeds-reservation-example.json
+  - type: Examples
+    url: examples/cloudbeds-guest-example.json
+  - type: Examples
+    url: examples/cloudbeds-rate-plan-example.json
+  - type: Vocabulary
+    url: vocabulary/cloudbeds-vocabulary.yml
+- aid: cloudbeds:cloudbeds-get-dashboard-api
+  name: Cloudbeds Get Dashboard API
+  description: The Get Dashboard API from Cloudbeds — 1 operation(s) for get dashboard.
+  humanURL: https://developers.cloudbeds.com/reference
+  baseURL: https://hotels.cloudbeds.com/api/v1.2
+  tags:
+  - Get Dashboard
+  properties:
+  - type: OpenAPI
+    url: openapi/cloudbeds-get-dashboard-api-openapi.yml
+  - type: Documentation
+    url: https://developers.cloudbeds.com/reference
+  - type: SpectralRules
+    url: rules/cloudbeds-rules.yml
+  - type: JSONSchema
+    url: json-schema/cloudbeds-reservation-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudbeds-guest-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudbeds-rate-plan-schema.json
+  - type: JSONStructure
+    url: json-structure/cloudbeds-reservation-structure.json
+  - type: JSONStructure
+    url: json-structure/cloudbeds-guest-structure.json
+  - type: JSONLD
+    url: json-ld/cloudbeds-context.jsonld
+  - type: Examples
+    url: examples/cloudbeds-reservation-example.json
+  - type: Examples
+    url: examples/cloudbeds-guest-example.json
+  - type: Examples
+    url: examples/cloudbeds-rate-plan-example.json
+  - type: Vocabulary
+    url: vocabulary/cloudbeds-vocabulary.yml
+- aid: cloudbeds:cloudbeds-get-webhooks-api
+  name: Cloudbeds Get Webhooks API
+  description: The Get Webhooks API from Cloudbeds — 1 operation(s) for get webhooks.
+  humanURL: https://developers.cloudbeds.com/reference
+  baseURL: https://hotels.cloudbeds.com/api/v1.2
+  tags:
+  - Get Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/cloudbeds-get-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://developers.cloudbeds.com/reference
+  - type: SpectralRules
+    url: rules/cloudbeds-rules.yml
+  - type: JSONSchema
+    url: json-schema/cloudbeds-reservation-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudbeds-guest-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudbeds-rate-plan-schema.json
+  - type: JSONStructure
+    url: json-structure/cloudbeds-reservation-structure.json
+  - type: JSONStructure
+    url: json-structure/cloudbeds-guest-structure.json
+  - type: JSONLD
+    url: json-ld/cloudbeds-context.jsonld
+  - type: Examples
+    url: examples/cloudbeds-reservation-example.json
+  - type: Examples
+    url: examples/cloudbeds-guest-example.json
+  - type: Examples
+    url: examples/cloudbeds-rate-plan-example.json
+  - type: Vocabulary
+    url: vocabulary/cloudbeds-vocabulary.yml
+- aid: cloudbeds:cloudbeds-user-info-api
+  name: Cloudbeds User Info API
+  description: The User Info API from Cloudbeds — 1 operation(s) for user info.
+  humanURL: https://developers.cloudbeds.com/reference
+  baseURL: https://hotels.cloudbeds.com/api/v1.2
+  tags:
+  - User Info
+  properties:
+  - type: OpenAPI
+    url: openapi/cloudbeds-user-info-api-openapi.yml
   - type: Documentation
     url: https://developers.cloudbeds.com/reference
   - type: SpectralRules
