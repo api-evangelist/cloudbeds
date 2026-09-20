@@ -81,7 +81,8 @@ edges:
   reason: Single operation updates an existing hotel reservation in the Cloudbeds PMS, which is booking
     modification within reservation lifecycle management.
 - tag: DeleteWebhook
-  spec_file: cloudbeds-deletewebhook-api-openapi.yml
+  spec_file: cloudbeds-delete-webhook-api-openapi.yml
+  reanchored_from: cloudbeds-deletewebhook-api-openapi.yml
   capability_id: BC-4270.80
   capability_id_l1: BC-4270
   capability_name: Webhook & Event Subscription Management
