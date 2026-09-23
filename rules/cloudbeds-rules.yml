@@ -1,11 +1,11 @@
-aid: cloudbeds
-name: Cloudbeds Rules
+x-aid: cloudbeds
+x-name: Cloudbeds Rules
 description: >-
   Operational rules and guardrails for working with the Cloudbeds REST API
   (v1.2/v1.3), GraphQL API, and webhooks. Codifies authentication, rate-limit
   handling, scope of resources that can be created or modified, and
   write-action policies for agents and integrations.
-modified: '2026-05-24'
+x-modified: '2026-05-24'
 rules:
   - id: cloudbeds-auth-apikey
     name: API Key Or OAuth Authentication
@@ -99,6 +99,6 @@ rules:
       - cloudbeds:rest-api-v1-3
       - cloudbeds:rest-api-v1-2
     severity: recommended
-maintainers:
+x-maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

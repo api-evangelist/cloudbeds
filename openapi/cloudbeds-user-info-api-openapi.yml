@@ -1,15 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Cloudbeds REST API v1.3 Access Token GetWebhooks API
+  title: Cloudbeds REST API v1.3 Userinfo API
   description: 'Cloudbeds REST API for property management - reservations, guests, rooms,
 
     rate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the
 
     current documented version (v1.2 remains available). Authentication is via
 
-    API keys or OAuth 2.0 for technology partners.
-
-    '
+    API keys or OAuth 2.0 for technology partners.'
   version: 1.3.0
 servers:
 - url: https://hotels.cloudbeds.com/api/v1.3
@@ -22,40 +20,23 @@ security:
   - read
   - write
 tags:
-- name: GetWebhooks
+- name: User Info
 paths:
-  /getWebhooks:
+  /userinfo:
     get:
-      summary: List webhooks
-      parameters:
-      - name: propertyID
-        in: query
-        schema:
-          type: string
+      summary: Get OAuth user info
       responses:
         '200':
-          description: Webhooks list
+          description: User info
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SuccessEnvelope'
+                type: object
       tags:
-      - GetWebhooks
+      - User Info
+      operationId: getUserinfo
+      x-operation-id-source: derived
 components:
-  schemas:
-    SuccessEnvelope:
-      type: object
-      properties:
-        success:
-          type: boolean
-        message:
-          type: string
-        data:
-          type: object
-        count:
-          type: integer
-        total:
-          type: integer
   securitySchemes:
     apiKey:
       type: apiKey

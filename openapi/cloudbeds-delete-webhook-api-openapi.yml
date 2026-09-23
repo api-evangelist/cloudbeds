@@ -1,15 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Cloudbeds REST API v1.3 Access Token Userinfo API
+  title: Cloudbeds REST API v1.3 Delete Webhook API
   description: 'Cloudbeds REST API for property management - reservations, guests, rooms,
 
     rate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the
 
     current documented version (v1.2 remains available). Authentication is via
 
-    API keys or OAuth 2.0 for technology partners.
-
-    '
+    API keys or OAuth 2.0 for technology partners.'
   version: 1.3.0
 servers:
 - url: https://hotels.cloudbeds.com/api/v1.3
@@ -22,21 +20,43 @@ security:
   - read
   - write
 tags:
-- name: Userinfo
+- name: Delete Webhook
 paths:
-  /userinfo:
-    get:
-      summary: Get OAuth user info
+  /deleteWebhook:
+    delete:
+      summary: Delete webhook
+      parameters:
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: string
       responses:
         '200':
-          description: User info
+          description: Deleted
           content:
             application/json:
               schema:
-                type: object
+                $ref: '#/components/schemas/SuccessEnvelope'
       tags:
-      - Userinfo
+      - Delete Webhook
+      operationId: deleteDeleteWebhook
+      x-operation-id-source: derived
 components:
+  schemas:
+    SuccessEnvelope:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        data:
+          type: object
+        count:
+          type: integer
+        total:
+          type: integer
   securitySchemes:
     apiKey:
       type: apiKey

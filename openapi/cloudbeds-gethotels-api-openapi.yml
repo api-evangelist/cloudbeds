@@ -1,15 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Cloudbeds REST API v1.3 Access Token GetHotels API
+  title: Cloudbeds REST API v1.3 Get Hotels API
   description: 'Cloudbeds REST API for property management - reservations, guests, rooms,
 
     rate plans, payments, housekeeping, webhooks, and reporting. v1.3 is the
 
     current documented version (v1.2 remains available). Authentication is via
 
-    API keys or OAuth 2.0 for technology partners.
-
-    '
+    API keys or OAuth 2.0 for technology partners.'
   version: 1.3.0
 servers:
 - url: https://hotels.cloudbeds.com/api/v1.3
@@ -36,6 +34,8 @@ paths:
                 $ref: '#/components/schemas/SuccessEnvelope'
       tags:
       - GetHotels
+      operationId: getGetHotels
+      x-operation-id-source: derived
 components:
   schemas:
     SuccessEnvelope:
