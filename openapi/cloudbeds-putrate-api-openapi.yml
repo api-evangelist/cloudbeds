@@ -44,18 +44,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    RatePlan:
-      type: object
-      properties:
-        rateID:
-          type: string
-        roomTypeID:
-          type: string
-        rate:
-          type: number
-        date:
-          type: string
-          format: date
     SuccessEnvelope:
       type: object
       properties:
@@ -69,6 +57,18 @@ components:
           type: integer
         total:
           type: integer
+    RatePlan:
+      type: object
+      properties:
+        rateID:
+          type: string
+        roomTypeID:
+          type: string
+        rate:
+          type: number
+        date:
+          type: string
+          format: date
   securitySchemes:
     apiKey:
       type: apiKey
