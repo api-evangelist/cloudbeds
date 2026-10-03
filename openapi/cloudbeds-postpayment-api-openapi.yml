@@ -44,19 +44,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Payment:
-      type: object
-      properties:
-        paymentID:
-          type: string
-        reservationID:
-          type: string
-        amount:
-          type: number
-        currency:
-          type: string
-        type:
-          type: string
     SuccessEnvelope:
       type: object
       properties:
@@ -70,6 +57,19 @@ components:
           type: integer
         total:
           type: integer
+    Payment:
+      type: object
+      properties:
+        paymentID:
+          type: string
+        reservationID:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+        type:
+          type: string
   securitySchemes:
     apiKey:
       type: apiKey
