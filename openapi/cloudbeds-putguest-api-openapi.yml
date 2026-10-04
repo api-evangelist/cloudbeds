@@ -44,19 +44,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    SuccessEnvelope:
-      type: object
-      properties:
-        success:
-          type: boolean
-        message:
-          type: string
-        data:
-          type: object
-        count:
-          type: integer
-        total:
-          type: integer
     Guest:
       type: object
       properties:
@@ -70,6 +57,19 @@ components:
           type: string
         phone:
           type: string
+    SuccessEnvelope:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        data:
+          type: object
+        count:
+          type: integer
+        total:
+          type: integer
   securitySchemes:
     apiKey:
       type: apiKey

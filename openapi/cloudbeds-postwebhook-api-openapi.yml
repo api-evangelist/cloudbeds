@@ -44,6 +44,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Webhook:
+      type: object
+      properties:
+        id:
+          type: string
+        event:
+          type: string
+        endpointUrl:
+          type: string
     SuccessEnvelope:
       type: object
       properties:
@@ -57,15 +66,6 @@ components:
           type: integer
         total:
           type: integer
-    Webhook:
-      type: object
-      properties:
-        id:
-          type: string
-        event:
-          type: string
-        endpointUrl:
-          type: string
   securitySchemes:
     apiKey:
       type: apiKey
