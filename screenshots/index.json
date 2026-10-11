@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "cloudbeds",
+    "captured_at": "2026-10-11T184031",
+    "source_url": "https://www.cloudbeds.com/",
+    "source_type": "Website",
+    "file": "cloudbeds-2026-10-11T184031.png",
+    "bytes": 389608,
+    "capture": "playwright-local"
+  }
+]
