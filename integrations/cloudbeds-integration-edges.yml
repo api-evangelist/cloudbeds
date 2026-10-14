@@ -1,0 +1,37 @@
+generated: '2026-10-14'
+method: searched
+checked:
+- https://integrations-api.siteminder.com/public/partners/all?lang=en
+- https://www.cloudbeds.com/marketplace/
+- toast/integrations/toast-integration-edges.yml
+source:
+- https://integrations-api.siteminder.com/public/partners/all?lang=en
+- https://www.cloudbeds.com/marketplace/
+edges:
+- partner_name: Toast (own)
+  partner: toast
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://pos.toasttab.com/partners/directory/cloudbeds
+  mirror_of: toast/integrations/toast-integration-edges.yml
+  apps:
+  - Cloudbeds
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Hotel
+marketplace_apps:
+- marketplace: own
+  channel: partner-built
+  app: cloudbeds
+  url: https://www.cloudbeds.com/marketplace/
+  app_count: null
+  adapter: sweep-hospitality.py:unreadable
+  listed: 0
+  status: not-machine-readable (HTTP 200; redirects to a demo-request page; no listing data (WordPress exposes no
+    integration type))
