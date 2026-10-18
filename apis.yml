@@ -1044,6 +1044,8 @@ apis:
   humanURL: https://developers.cloudbeds.com/reference
   baseURL: https://hotels.cloudbeds.com/api/v1.2
   tags:
+  - UserInfo
+  tags_raw:
   - User Info
   properties:
   - type: OpenAPI
