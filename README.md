@@ -1,4 +1,4 @@
-# Cloudbeds (cloudbeds)
+# Cloudbeds
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,123 +66,224 @@
 
 Cloudbeds is a San Diego-based hospitality management platform for small and mid-size independent hotels, hostels, and groups, offering PMS, channel manager, booking engine, payments, and a marketplace of integrations. Cloudbeds publishes a public REST API (v1.2 and v1.3), a GraphQL API, blueprints, and webhooks for reservations, guests, rooms, rates, payments, and events.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/cloudbeds/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/cloudbeds/refs/heads/main/apis.yml)
+**Areas:** Hospitality · Hotels · PMS · Property Management · Channel Manager · Booking Engine · Payments
 
-## Tags
+## Cloudbeds on APIs.io
 
-- Hospitality
-- Hotels
-- PMS
-- Property Management
-- Channel Manager
-- Booking Engine
-- Payments
+Everything profiled for Cloudbeds is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cloudbeds/](https://apis.io/providers/cloudbeds/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (32)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-24
+- [Cloudbeds REST API v1.2 (Legacy)](https://apis.io/apis/cloudbeds/rest-api-v1-2/) — Earlier supported version of the Cloudbeds REST API. New integrations should target v1.3.
+- [Cloudbeds GraphQL API](https://apis.io/apis/cloudbeds/graphql/) — GraphQL API offering a typed query interface for reservations, properties, and inventory alongside the REST API.
+- [Cloudbeds Webhooks](https://apis.io/apis/cloudbeds/webhooks/) — Event-driven webhooks for reservation, guest, room, and payment state changes. Use webhooks instead of polling list endpoints.
+- [Cloudbeds Access Token API](https://apis.io/apis/cloudbeds/cloudbeds-access-token-api/) — The Access Token API from Cloudbeds — 1 operation(s) for access token.
+- [Cloudbeds GetAvailableRoomTypes API](https://apis.io/apis/cloudbeds/cloudbeds-getavailableroomtypes-api/) — The GetAvailableRoomTypes API from Cloudbeds — 1 operation(s) for getavailableroomtypes.
+- [Cloudbeds GetGuest API](https://apis.io/apis/cloudbeds/cloudbeds-getguest-api/) — The GetGuest API from Cloudbeds — 1 operation(s) for getguest.
+- [Cloudbeds GetGuestList API](https://apis.io/apis/cloudbeds/cloudbeds-getguestlist-api/) — The GetGuestList API from Cloudbeds — 1 operation(s) for getguestlist.
+- [Cloudbeds GetHotelDetails API](https://apis.io/apis/cloudbeds/cloudbeds-gethoteldetails-api/) — The GetHotelDetails API from Cloudbeds — 1 operation(s) for gethoteldetails.
+- [Cloudbeds GetHotels API](https://apis.io/apis/cloudbeds/cloudbeds-gethotels-api/) — The GetHotels API from Cloudbeds — 1 operation(s) for gethotels.
+- [Cloudbeds GetPaymentMethods API](https://apis.io/apis/cloudbeds/cloudbeds-getpaymentmethods-api/) — The GetPaymentMethods API from Cloudbeds — 1 operation(s) for getpaymentmethods.
+- [Cloudbeds GetRate API](https://apis.io/apis/cloudbeds/cloudbeds-getrate-api/) — The GetRate API from Cloudbeds — 1 operation(s) for getrate.
+- [Cloudbeds GetRatePlans API](https://apis.io/apis/cloudbeds/cloudbeds-getrateplans-api/) — The GetRatePlans API from Cloudbeds — 1 operation(s) for getrateplans.
+- [Cloudbeds GetReservation API](https://apis.io/apis/cloudbeds/cloudbeds-getreservation-api/) — The GetReservation API from Cloudbeds — 1 operation(s) for getreservation.
+- [Cloudbeds GetReservations API](https://apis.io/apis/cloudbeds/cloudbeds-getreservations-api/) — The GetReservations API from Cloudbeds — 1 operation(s) for getreservations.
+- [Cloudbeds GetRooms API](https://apis.io/apis/cloudbeds/cloudbeds-getrooms-api/) — The GetRooms API from Cloudbeds — 1 operation(s) for getrooms.
+- [Cloudbeds GetRoomTypes API](https://apis.io/apis/cloudbeds/cloudbeds-getroomtypes-api/) — The GetRoomTypes API from Cloudbeds — 1 operation(s) for getroomtypes.
+- [Cloudbeds GetUsers API](https://apis.io/apis/cloudbeds/cloudbeds-getusers-api/) — The GetUsers API from Cloudbeds — 1 operation(s) for getusers.
+- [Cloudbeds PostCharge API](https://apis.io/apis/cloudbeds/cloudbeds-postcharge-api/) — The PostCharge API from Cloudbeds — 1 operation(s) for postcharge.
+- [Cloudbeds PostGuest API](https://apis.io/apis/cloudbeds/cloudbeds-postguest-api/) — The PostGuest API from Cloudbeds — 1 operation(s) for postguest.
+- [Cloudbeds PostPayment API](https://apis.io/apis/cloudbeds/cloudbeds-postpayment-api/) — The PostPayment API from Cloudbeds — 1 operation(s) for postpayment.
+- [Cloudbeds PostReservation API](https://apis.io/apis/cloudbeds/cloudbeds-postreservation-api/) — The PostReservation API from Cloudbeds — 1 operation(s) for postreservation.
+- [Cloudbeds PostRoomAssign API](https://apis.io/apis/cloudbeds/cloudbeds-postroomassign-api/) — The PostRoomAssign API from Cloudbeds — 1 operation(s) for postroomassign.
+- [Cloudbeds PostRoomCheckIn API](https://apis.io/apis/cloudbeds/cloudbeds-postroomcheckin-api/) — The PostRoomCheckIn API from Cloudbeds — 1 operation(s) for postroomcheckin.
+- [Cloudbeds PostRoomCheckOut API](https://apis.io/apis/cloudbeds/cloudbeds-postroomcheckout-api/) — The PostRoomCheckOut API from Cloudbeds — 1 operation(s) for postroomcheckout.
+- [Cloudbeds PostWebhook API](https://apis.io/apis/cloudbeds/cloudbeds-postwebhook-api/) — The PostWebhook API from Cloudbeds — 1 operation(s) for postwebhook.
+- [Cloudbeds PutGuest API](https://apis.io/apis/cloudbeds/cloudbeds-putguest-api/) — The PutGuest API from Cloudbeds — 1 operation(s) for putguest.
+- [Cloudbeds PutRate API](https://apis.io/apis/cloudbeds/cloudbeds-putrate-api/) — The PutRate API from Cloudbeds — 1 operation(s) for putrate.
+- [Cloudbeds PutReservation API](https://apis.io/apis/cloudbeds/cloudbeds-putreservation-api/) — The PutReservation API from Cloudbeds — 1 operation(s) for putreservation.
+- [Cloudbeds Delete Webhook API](https://apis.io/apis/cloudbeds/cloudbeds-delete-webhook-api/) — The Delete Webhook API from Cloudbeds — 1 operation(s) for delete webhook.
+- [Cloudbeds Get Dashboard API](https://apis.io/apis/cloudbeds/cloudbeds-get-dashboard-api/) — The Get Dashboard API from Cloudbeds — 1 operation(s) for get dashboard.
+- [Cloudbeds Get Webhooks API](https://apis.io/apis/cloudbeds/cloudbeds-get-webhooks-api/) — The Get Webhooks API from Cloudbeds — 1 operation(s) for get webhooks.
+- [Cloudbeds User Info API](https://apis.io/apis/cloudbeds/cloudbeds-user-info-api/) — The User Info API from Cloudbeds — 1 operation(s) for user info.
 
-## APIs
+### Published properties
 
-### Cloudbeds REST API v1.3
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API exposing reservations, guests, rooms, rate plans, payments, webhooks, dashboard, and reporting for properties using Cloudbeds. v1.3 is the latest documented version.
+#### GraphQL (1)
 
-- **Human URL:** [https://developers.cloudbeds.com/reference](https://developers.cloudbeds.com/reference)
-- **Base URL:** `https://hotels.cloudbeds.com/api/v1.3`
+GraphQL schemas.
 
-#### Tags
+- [Cloudbeds GraphQL API](https://apis.io/graphqls/cloudbeds/cloudbeds-graphql/)
 
-- REST
-- PMS
-- v1.3
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://developers.cloudbeds.com/reference)
-- [OpenAPI](openapi/cloudbeds-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/cloudbeds.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cloudbeds.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Spectral Rules](rules/cloudbeds-rules.yml)
-- [JSON Schema](json-schema/cloudbeds-reservation-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/cloudbeds-guest-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/cloudbeds-rate-plan-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/cloudbeds-reservation-structure.json)
-- [JSON Structure](json-structure/cloudbeds-guest-structure.json)
-- [JSON-LD](json-ld/cloudbeds-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Example](examples/cloudbeds-reservation-example.json)
-- [Example](examples/cloudbeds-guest-example.json)
-- [Example](examples/cloudbeds-rate-plan-example.json)
-- [Vocabulary](vocabulary/cloudbeds-vocabulary.yml)
+- [Cloudbeds Agentic Access](https://apis.io/agentic-access/cloudbeds/cloudbeds-agentic-access/)
 
-### Cloudbeds REST API v1.2 (Legacy)
+#### JSON Schema (3)
 
-Earlier supported version of the Cloudbeds REST API. New integrations should target v1.3.
+The data models the API reads and writes.
 
-- **Human URL:** [https://developers.cloudbeds.com/reference](https://developers.cloudbeds.com/reference)
-- **Base URL:** `https://hotels.cloudbeds.com/api/v1.2`
+- [Cloudbeds Guest](https://apis.io/schemas/cloudbeds/cloudbeds-guest/)
+- [Cloudbeds Rate Plan](https://apis.io/schemas/cloudbeds/cloudbeds-rate-plan/)
+- [Cloudbeds Reservation](https://apis.io/schemas/cloudbeds/cloudbeds-reservation/)
 
-#### Tags
+#### JSON Structure (2)
 
-- REST
-- PMS
-- Legacy
+Data models expressed in JSON Structure.
 
-#### Properties
+- [Cloudbeds Guest Structure](https://apis.io/json-structure/cloudbeds/cloudbeds-guest-structure/)
+- [Cloudbeds Reservation Structure](https://apis.io/json-structure/cloudbeds/cloudbeds-reservation-structure/)
 
-- [Documentation](https://developers.cloudbeds.com/reference)
-- [Postman Collection](collections/cloudbeds.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cloudbeds.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### JSON-LD (1)
 
-### Cloudbeds GraphQL API
+Linked-data contexts for the provider's vocabulary.
 
-GraphQL API offering a typed query interface for reservations, properties, and inventory alongside the REST API.
+- [Cloudbeds Context](https://apis.io/jsonld/cloudbeds/cloudbeds-context/)
 
-- **Human URL:** [https://developers.cloudbeds.com/reference](https://developers.cloudbeds.com/reference)
+#### Vocabulary (1)
 
-#### Tags
+The provider's domain terms, defined.
 
-- GraphQL
+- [Cloudbeds Vocabulary](https://apis.io/vocabularies/cloudbeds/cloudbeds-vocabulary/)
 
-#### Properties
+#### Examples (3)
 
-- [Documentation](https://developers.cloudbeds.com/reference)
-- [Postman Collection](collections/cloudbeds.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cloudbeds.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Example requests and responses.
 
-### Cloudbeds Webhooks
+- [Cloudbeds Guest Example](https://apis.io/examples/cloudbeds/cloudbeds-guest-example/)
+- [Cloudbeds Rate Plan Example](https://apis.io/examples/cloudbeds/cloudbeds-rate-plan-example/)
+- [Cloudbeds Reservation Example](https://apis.io/examples/cloudbeds/cloudbeds-reservation-example/)
 
-Event-driven webhooks for reservation, guest, room, and payment state changes. Use webhooks instead of polling list endpoints.
+#### Collections (30)
 
-- **Human URL:** [https://developers.cloudbeds.com/reference](https://developers.cloudbeds.com/reference)
+Postman and Open Collection request collections.
 
-#### Tags
+- [Cloudbeds REST API v1.3](https://apis.io/collections/cloudbeds/open-cloudbeds/)
+- [Cloudbeds REST API v1.3 Access Token API](https://apis.io/collections/cloudbeds/open-cloudbeds-access-token-api/)
+- [Cloudbeds REST API v1.3 Access Token DeleteWebhook API](https://apis.io/collections/cloudbeds/open-cloudbeds-deletewebhook-api/)
+- [Cloudbeds REST API v1.3 Access Token GetAvailableRoomTypes API](https://apis.io/collections/cloudbeds/open-cloudbeds-getavailableroomtypes-api/)
+- [Cloudbeds REST API v1.3 Access Token GetDashboard API](https://apis.io/collections/cloudbeds/open-cloudbeds-getdashboard-api/)
+- [Cloudbeds REST API v1.3 Access Token GetGuest API](https://apis.io/collections/cloudbeds/open-cloudbeds-getguest-api/)
+- [Cloudbeds REST API v1.3 Access Token GetGuestList API](https://apis.io/collections/cloudbeds/open-cloudbeds-getguestlist-api/)
+- [Cloudbeds REST API v1.3 Access Token GetHotelDetails API](https://apis.io/collections/cloudbeds/open-cloudbeds-gethoteldetails-api/)
+- [Cloudbeds REST API v1.3 Access Token GetHotels API](https://apis.io/collections/cloudbeds/open-cloudbeds-gethotels-api/)
+- [Cloudbeds REST API v1.3 Access Token GetPaymentMethods API](https://apis.io/collections/cloudbeds/open-cloudbeds-getpaymentmethods-api/)
+- [Cloudbeds REST API v1.3 Access Token GetRate API](https://apis.io/collections/cloudbeds/open-cloudbeds-getrate-api/)
+- [Cloudbeds REST API v1.3 Access Token GetRatePlans API](https://apis.io/collections/cloudbeds/open-cloudbeds-getrateplans-api/)
+- [Cloudbeds REST API v1.3 Access Token GetReservation API](https://apis.io/collections/cloudbeds/open-cloudbeds-getreservation-api/)
+- [Cloudbeds REST API v1.3 Access Token GetReservations API](https://apis.io/collections/cloudbeds/open-cloudbeds-getreservations-api/)
+- [Cloudbeds REST API v1.3 Access Token GetRooms API](https://apis.io/collections/cloudbeds/open-cloudbeds-getrooms-api/)
+- [Cloudbeds REST API v1.3 Access Token GetRoomTypes API](https://apis.io/collections/cloudbeds/open-cloudbeds-getroomtypes-api/)
+- [Cloudbeds REST API v1.3 Access Token GetUsers API](https://apis.io/collections/cloudbeds/open-cloudbeds-getusers-api/)
+- [Cloudbeds REST API v1.3 Access Token GetWebhooks API](https://apis.io/collections/cloudbeds/open-cloudbeds-getwebhooks-api/)
+- [Cloudbeds REST API v1.3 Access Token PostCharge API](https://apis.io/collections/cloudbeds/open-cloudbeds-postcharge-api/)
+- [Cloudbeds REST API v1.3 Access Token PostGuest API](https://apis.io/collections/cloudbeds/open-cloudbeds-postguest-api/)
+- [Cloudbeds REST API v1.3 Access Token PostPayment API](https://apis.io/collections/cloudbeds/open-cloudbeds-postpayment-api/)
+- [Cloudbeds REST API v1.3 Access Token PostReservation API](https://apis.io/collections/cloudbeds/open-cloudbeds-postreservation-api/)
+- [Cloudbeds REST API v1.3 Access Token PostRoomAssign API](https://apis.io/collections/cloudbeds/open-cloudbeds-postroomassign-api/)
+- [Cloudbeds REST API v1.3 Access Token PostRoomCheckIn API](https://apis.io/collections/cloudbeds/open-cloudbeds-postroomcheckin-api/)
+- [Cloudbeds REST API v1.3 Access Token PostRoomCheckOut API](https://apis.io/collections/cloudbeds/open-cloudbeds-postroomcheckout-api/)
+- …and 5 more published on APIs.io
 
-- Webhooks
-- Events
+#### Governance rules (2)
 
-#### Properties
+Spectral rulesets for the provider's contracts.
 
-- [Documentation](https://developers.cloudbeds.com/reference)
-- [Postman Collection](collections/cloudbeds.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cloudbeds.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Cloudbeds — jsonschema rules](https://apis.io/rules/cloudbeds/cloudbeds-jsonschema-spectral-rules/)
+- [Cloudbeds API Rules](https://apis.io/rules/cloudbeds/cloudbeds-rules/)
 
-## Common Properties
+#### Security (2)
 
-- [GitHub Organization](https://github.com/cloudbeds)
-- [LinkedIn](https://www.linkedin.com/company/cloudbeds)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Cloudbeds Authentication](https://apis.io/security/cloudbeds/cloudbeds-authentication/)
+- [Cloudbeds Domain Security](https://apis.io/security/cloudbeds/cloudbeds-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Cloudbeds Scopes](https://apis.io/scopes/cloudbeds/cloudbeds-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Cloudbeds Plans Pricing](https://apis.io/plans/cloudbeds/cloudbeds-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Cloudbeds Rate Limits](https://apis.io/rate-limits/cloudbeds/cloudbeds-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Cloudbeds Finops](https://apis.io/finops/cloudbeds/cloudbeds-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.cloudbeds.com/)
-- [Developer](https://developers.cloudbeds.com/)
-- [Plans](plans/cloudbeds-plans-pricing.yml)
-- [Rate Limits](rate-limits/cloudbeds-rate-limits.yml)
-- [Fin Ops](finops/cloudbeds-finops.yml)
-- [Integrations](https://www.cloudbeds.com/integrations/)
-- [L L Ms Txt](https://developers.cloudbeds.com/llms.txt)
-- [Spectral Rules](rules/cloudbeds-rules.yml)
-- [Vocabulary](vocabulary/cloudbeds-vocabulary.yml)
+- [Blog](https://www.cloudbeds.com/feed/)
+- [GitHub](https://github.com/cloudbeds)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 30.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 59.8 |
+| Contract governance | 23.5 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 5.3 |
+
+**Agent readiness 21.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.1** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cloudbeds/](https://apis.io/providers/cloudbeds/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cloudbeds: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cloudbeds/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
